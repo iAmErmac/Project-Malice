@@ -1,5 +1,7 @@
 Class PM_Bulltubus : PMWrathMonsterBase
  {
+	mixin lzdoomCompat;
+	
   int casingcount;
   Default
   {
@@ -477,6 +479,8 @@ Class PM_Bulltubus : PMWrathMonsterBase
 
 Class PM_BulltubusSlowTracer : Fatshot
 {
+	mixin lzdoomCompat;
+	
   Default
   {
    Projectile;
@@ -584,6 +588,8 @@ Class PM_BulltubusFastTracer : PM_BulltubusSlowTracer
 
 Class PM_BulltubusShotgunTracer : PM_BulltubusSlowTracer
 {
+	mixin lzdoomCompat;
+	
   int timer;
   Default
   {
@@ -661,6 +667,8 @@ Class PM_BulltubusShotgunTracer : PM_BulltubusSlowTracer
 
 Class PM_BulltubusFlamer : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
    Radius 7;

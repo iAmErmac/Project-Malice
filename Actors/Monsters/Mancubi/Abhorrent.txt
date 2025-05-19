@@ -1,5 +1,7 @@
 Class PM_Abhorrent : PMDeathMonsterBase
 {
+	mixin lzdoomCompat;
+	
  int deathwither;
  Default
  {
@@ -234,6 +236,8 @@ Class PM_Abhorrent : PMDeathMonsterBase
 
 Class PM_AbhorBall : Fatshot
 {
+	mixin lzdoomCompat;
+	
     Default
     {
     Radius 8;
@@ -292,6 +296,8 @@ Class PM_AbhorBall : Fatshot
 
 Class PM_AbhorBarrageBall : Fatshot
 {
+	mixin lzdoomCompat;
+	
 	int soulhspeed;
 	int soulhdist;
     Default
@@ -353,6 +359,8 @@ Class PM_AbhorBarrageBall : Fatshot
 
 Class PM_AbhorSmallBall : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
     Radius 5;
@@ -399,6 +407,8 @@ Class PM_AbhorSmallBall : Actor
 
 Class PM_AbhorSoulVomit : Actor
 {
+	mixin lzdoomCompat;
+	
 	int soulhspeed;
 	int soulvspeed;
 	int soulhdist;

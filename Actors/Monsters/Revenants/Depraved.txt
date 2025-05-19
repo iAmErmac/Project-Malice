@@ -1,5 +1,7 @@
 Class PM_Depraved : PMUmbralMonsterBase
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	PMMonsterBase.CodexLore 
@@ -521,6 +523,8 @@ Class RedFlareEffect : Actor
 
 Class PM_DepravedBeamWarning : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Projectile;
@@ -564,6 +568,8 @@ Class PM_DepravedBeamWarning : Actor
 
 Class PM_DepravedElectricFx : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	+ROLLSPRITE;
@@ -595,6 +601,8 @@ Class PM_DepravedElectricFx : Actor
 
 Class PM_DepravedEyeLaser : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Projectile;
@@ -631,6 +639,8 @@ Class PM_DepravedEyeLaser : Actor
 
 Class PM_DepravedSpit : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 6;
@@ -701,6 +711,8 @@ Class PM_DepravedSpit : Actor
 
 Class PM_DepravedHomingSpit : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 6;

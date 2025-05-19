@@ -375,6 +375,8 @@ Class PM_CivilianZombie : PMLustMonsterBase
 
 Class PM_CivZombieMolotov : PM_ZTrooperFragGrenade 
 {
+	mixin lzdoomCompat;
+	
  Default
  {
   Speed 18;

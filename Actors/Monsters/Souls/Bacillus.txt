@@ -1,5 +1,7 @@
 Class PM_Bacillus : PMEnvyMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	bool sigil;
 	
 	Default
@@ -296,6 +298,8 @@ Class PM_Bacillus : PMEnvyMonsterBase
 
 Class PM_BacillusBall : WickedShot
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		SeeSound "";
@@ -329,6 +333,8 @@ Class PM_BacillusBall : WickedShot
 
 Class PM_BacillusBurntSoulCopy : Actor
 {
+	mixin lzdoomCompat;
+	
 	int timer;
 	Default
 	{
@@ -428,6 +434,8 @@ Class PM_BacillusBurntSoulCopy : Actor
 
 Class PM_CopyBloodSpit : PM_BloodSpit
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Decal "PM_GreenBloodSplat";

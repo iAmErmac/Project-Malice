@@ -1,6 +1,8 @@
 //Watcher
 Class PM_Watcher : PMUmbralMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		//$Category "PM_Monsters/Cacodemons"
@@ -330,6 +332,8 @@ Class PM_Watcher : PMUmbralMonsterBase
 
 Class PM_WatcherShot : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 4;
@@ -541,6 +545,8 @@ Class PM_WatcherShot : Actor
 
 Class PM_WatcherShotSmall : MageWandMissile
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Damage 2;

@@ -1,5 +1,7 @@
 Class PM_Enceinte : PMLustMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -232,6 +234,8 @@ Class PM_Enceinte : PMLustMonsterBase
 
 Class PM_EnceinteSpit : PM_CherubSpit
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Speed 15;
@@ -448,6 +452,8 @@ Class PM_BabyCherub : PM_Cherub
 
 Class PM_EnceinteBlast : PM_CherubSpit
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Speed 20;

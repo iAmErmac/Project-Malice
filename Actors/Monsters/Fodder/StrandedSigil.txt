@@ -1,5 +1,7 @@
 Class PM_StrandedSigil : PMFodderMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore

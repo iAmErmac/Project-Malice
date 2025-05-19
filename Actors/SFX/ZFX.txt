@@ -1,5 +1,8 @@
+
 Class PM_HitPuff : Actor
 {
+	mixin lzdoomCompat;
+
     int hitspawn;
     Default
 	{
@@ -212,6 +215,8 @@ Class PM_GraveGuardWalkFire : PM_WalkFire
 //Possessing Demons
 class PM_FleeingDarkSpiritOrb: Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
    Radius 1;
@@ -257,6 +262,8 @@ Default
 
 class PM_PossSpriteFlee: Actor
 {
+	mixin lzdoomCompat;
+
 Default
 {
   +NOINTERACTION
@@ -299,6 +306,8 @@ Default
 
 class PM_PossessingDemonSprite: Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
    Radius 4;
@@ -438,6 +447,8 @@ Default
 
 class PM_PossSpriteAttack : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
   Speed 16;
@@ -496,6 +507,8 @@ Default
 
 Class PM_NormalTeleportFog : Actor replaces TeleportFog
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -629,6 +642,8 @@ States
 
 class PM_PossessedTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -769,6 +784,8 @@ States
 
 class PM_DemonicTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -1044,6 +1061,8 @@ A_SpawnParticleEx
 
 class PM_SmallDemonicTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -1273,6 +1292,8 @@ States
 //Gluttony Fog
 class PM_GluttonyTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -1564,6 +1585,8 @@ A_SpawnParticleEx
 //Lust Fog
 Class PM_LustTeleportFog : PMMonsterBase
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -1928,6 +1951,8 @@ A_SpawnParticleEx
 //Envy Teleport
 Class PM_EnvyTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -2157,6 +2182,8 @@ States
 //Wrath Teleport
 class PM_WrathTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -2494,6 +2521,8 @@ Class PM_WarTeleportSphere : Actor
 
 Class PM_WarTeleElectricity : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Projectile;
@@ -2537,6 +2566,8 @@ Class PM_WarTeleElectricity : Actor
 
 Class PM_WarTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Alpha 1;
@@ -2786,6 +2817,8 @@ States
 
 Class PM_PrideTeleportFog : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Alpha 1;
@@ -2852,6 +2885,8 @@ Class PM_PrideTeleportFog : Actor
 
 Class PM_PrideTeleBeacon : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	 XScale .15;
@@ -2896,6 +2931,8 @@ Class PM_PrideTeleBeacon : Actor
 
 Class PM_PrideTeleCircle : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	+CLIENTSIDEONLY
@@ -2966,6 +3003,8 @@ Class PM_PrideTeleCircle2 : PM_PrideTeleCircle
 //Sin-Specific Actors
 Class PM_WrathIreActivate : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
 	+NOGRAVITY
@@ -3062,6 +3101,8 @@ Class PM_WrathIreActivate : Actor
 
 Class PM_WrathIreEffect : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 +NOGRAVITY
@@ -3384,6 +3425,8 @@ Class PM_SlothSlowdownLong : PowerSpeed
 
 Class PM_PlasmaShieldBase : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Tag "Plasmatic Shield";

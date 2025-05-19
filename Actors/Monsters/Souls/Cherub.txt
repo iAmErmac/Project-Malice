@@ -140,6 +140,8 @@ Class PM_Cherub : PMLustMonsterBase
 
 Class PM_CherubSpit : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Translation "0:255=%[0.00,0.00,0.00]:[1.50,0.80,1.93]";

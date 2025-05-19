@@ -1,5 +1,7 @@
 Class PM_POTS : PMVoidMonsterBase
-{ 
+{
+	mixin lzdoomCompat;
+	
 	int user_pawnkicker;
 	int user_pawntick;
 	Default
@@ -448,6 +450,8 @@ Class PM_POTS : PMVoidMonsterBase
 
 Class PM_POTSScreamer : PMVoidMonsterBase
 { 
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	//$Category "PM_Monsters/Fodder/POTS"
@@ -618,6 +622,8 @@ Class PM_POTSScreamer : PMVoidMonsterBase
 
 class PM_PotsLunge: Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
 Height 15;
@@ -639,6 +645,8 @@ Spawn:
 
 class PM_PotsBall : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
   Speed 20;

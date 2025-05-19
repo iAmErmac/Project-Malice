@@ -53,6 +53,8 @@ Default
 
 class PM_Blot : PMUmbralMonsterBase
 {
+	mixin lzdoomCompat;
+	
 Default
 {
   PMMonsterBase.CodexLore
@@ -216,6 +218,8 @@ Default
 
 Class PM_BlotFlee : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
   +NOINTERACTION
@@ -241,6 +245,8 @@ Default
 
 class PM_BlotFleeNoSound : PM_BlotFlee
 {
+	mixin lzdoomCompat;
+	
 Default
   {
    SeeSound "";

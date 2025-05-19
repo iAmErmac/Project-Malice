@@ -1,5 +1,7 @@
 Class PM_DecayedSoldier : PMPestilenceMonsterBase
 { 
+	mixin lzdoomCompat;
+	
     int bloattimer;
 	Default
 	{

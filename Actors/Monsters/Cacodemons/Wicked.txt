@@ -1,5 +1,7 @@
 Class PM_Wicked : PMEnvyMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore 
@@ -573,6 +575,8 @@ Class PM_Wicked : PMEnvyMonsterBase
 
 Class WickedShot : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 8;
@@ -927,6 +931,8 @@ Class WickedRevolveShot2 : WickedShot
 
 Class PM_WickedChaserBall : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	Projectile;
@@ -1262,6 +1268,8 @@ Class WickedTorsoRes : Actor
 
 Class PM_WickedCopyBall : PM_WretchedBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	SeeSound "";
@@ -1422,6 +1430,8 @@ Class PM_WickedCopyBall : PM_WretchedBall
 
 Class PM_WickedCopyPBall : PM_PhaseCacoBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Scale 1.10;
@@ -1724,6 +1734,8 @@ Class PM_WickedCopyPBallTrail : PM_PhaseCacoBallTrail
 
 Class PM_WickedCopyEye : PM_BeholderEye
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	 BloodColor "DarkGreen";
@@ -1839,6 +1851,8 @@ Class PM_WickedEyeAttack : PM_BeholderEyeAttack
 
 Class PM_WickedInfernalCopy : Actor
 {
+	mixin lzdoomCompat;
+	
   int timer;
   Default
   {

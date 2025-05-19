@@ -429,6 +429,8 @@ Class PM_UPriestTrail : Actor
 
 Class PM_UDiscipleShot : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
     Radius 4;
@@ -487,6 +489,8 @@ Class PM_UDiscipleShot : Actor
 
 Class PM_UDiscipleBarrageShot : PM_UDiscipleShot
 {
+	mixin lzdoomCompat;
+	
  Default
  {
  SeeSound "Abhor/SoulExp";
@@ -549,6 +553,8 @@ Class PM_UDiscipleBarrageShot : PM_UDiscipleShot
 
 Class PM_UDiscipleVoidBall : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	DamageFunction (random(18,18));

@@ -1,6 +1,8 @@
 
 Class PM_Bruiser : PMUnaffMonsterBase
 {
+	mixin lzdoomCompat;
+	
   int user_leapstrength;
   Default
   {
@@ -296,6 +298,8 @@ Class PM_Bruiser : PMUnaffMonsterBase
 
 Class PM_BruiserSmallFireball : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	+NOGRAVITY
@@ -355,6 +359,8 @@ Class PM_BruiserSmallFireball : DoomImpBall
 
 Class PM_BruiserMeteor : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   Speed 16;

@@ -1,5 +1,7 @@
 Class PM_Cataclysm : PMWarMonsterBase
 {
+	mixin lzdoomCompat;
+	
   Default
 	{
 		PMMonsterBase.CodexLore
@@ -306,6 +308,8 @@ Class PM_Cataclysm : PMWarMonsterBase
 
 Class PM_CataclysmLaser : PM_BlashemerBHBall
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 12;
@@ -338,6 +342,8 @@ Class PM_CataclysmLaser : PM_BlashemerBHBall
 
 Class PM_CataclysmGigaLaser : PM_CataclysmLaser
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 25;
@@ -393,6 +399,8 @@ Class PM_CataclysmGigaLaser : PM_CataclysmLaser
 
 Class PM_CataclysmPlasma : PM_CataclysmLaser
 {
+	mixin lzdoomCompat;
+	
 	override void PostBeginPlay()
 	{
 		super.PostBeginPlay();

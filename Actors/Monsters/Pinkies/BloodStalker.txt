@@ -1,5 +1,7 @@
 Class PM_BloodStalker : PMUmbralMonsterBase
 {
+	mixin lzdoomCompat;
+	
     bool rushing;
     Default
 	{
@@ -207,6 +209,8 @@ Class PM_BloodStalker : PMUmbralMonsterBase
 
 Class PM_BStalkerFrostBreath : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 4;

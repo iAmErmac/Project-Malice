@@ -228,7 +228,7 @@ class PMMonsterBase : Actor abstract
 		{
 			double cp = cos(p + frandom(-15, 15));
 			double sp = -sin(p + frandom(-15, 15));
-			caller.A_SpawnParticleEx(col, tex, STYLE_Add, SPF_RELPOS | SPF_RELVEL | SPF_RELACCEL | SPF_FULLBRIGHT | SPF_NOTIMEFREEZE, 30, frandom(4, 8), caller.Angle + frandom(-180, 180), offset.X + dist * cp, offset.Y, offset.Z + dist * sp, 0, 0, 0, -0.10 * cp, 0, -0.10 * sp);
+			//caller.A_SpawnParticleEx(col, tex, STYLE_Add, SPF_RELPOS | SPF_RELVEL | SPF_RELACCEL | SPF_FULLBRIGHT | SPF_NOTIMEFREEZE, 30, frandom(4, 8), caller.Angle + frandom(-180, 180), offset.X + dist * cp, offset.Y, offset.Z + dist * sp, 0, 0, 0, -0.10 * cp, 0, -0.10 * sp);
 		}
 	}
 
@@ -242,7 +242,8 @@ class PMMonsterBase : Actor abstract
 		double dist = diff.Length();
 		flinetracedata Lbeam;
 		double PitchDes=atan2(-diff.z,diff.xy.length());
-		double AngleDes=atan2(diff.xy);
+		//double AngleDes=atan2(diff.xy);
+		double AngleDes=atan2(diff.x, diff.y);
 		
 		spawner.linetrace(
 			AngleDes,
@@ -262,7 +263,7 @@ class PMMonsterBase : Actor abstract
 		las.angle=AngleDes;
 		las.SetShade(col);
 		
-		FSpawnParticleParams part;
+		/*FSpawnParticleParams part;
 		part.pos=Lbeam.hitlocation;
 		part.color1=col;
 		part.StartAlpha=1;
@@ -270,7 +271,7 @@ class PMMonsterBase : Actor abstract
 		part.Size = 40*scale;
 		part.Style=(flags & SBF_NOADD ? STYLE_Normal : STYLE_Add);
 		part.lifetime=1;
-		Level.SpawnParticle(Part);
+		Level.SpawnParticle(Part);*/
 	}
 
 	override void PostBeginPlay()
@@ -422,6 +423,8 @@ Class PM_Bolt : Actor
 
 class PM_BeamSegment : Actor abstract
 {
+	mixin lzdoomCompat;
+	
 	protected virtual void SpawnRayParticles()
 	{
 		for (int i = 0; i < 1; ++i)

@@ -368,6 +368,8 @@ Class PM_WhiplashCrawlTrail : Actor
 
 Class PM_WhiplashKnife : MageWandMissile
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   DamageFunction 10;

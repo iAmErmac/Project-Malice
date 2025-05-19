@@ -180,6 +180,8 @@ Class PM_HeresyLord : PMUnaffMonsterBase
 
 Class PM_HeresyLordRedBall : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	DamageFunction (random(30,35));
@@ -388,6 +390,8 @@ Class PM_HeresyLordMissileDual1Fake : Actor
 }
 Class PM_HeresyLordMissileDual1Real : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	Projectile;
@@ -491,6 +495,8 @@ Class PM_HeresyLordMissileDual2Fake : Actor
 }
 Class PM_HeresyLordMissileDual2Real : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	Projectile;

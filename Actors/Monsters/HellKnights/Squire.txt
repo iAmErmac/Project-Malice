@@ -325,6 +325,8 @@ Class PM_SquireLunge : Actor
 
 Class PM_SquireFireball : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	+NOGRAVITY

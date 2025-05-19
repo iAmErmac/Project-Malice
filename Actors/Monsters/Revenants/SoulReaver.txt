@@ -1,5 +1,7 @@
 Class PM_DormantReaver : PMDeathMonsterBase
 {
+	mixin lzdoomCompat;
+	
   int rush;
   double angle;
   int deathwither;
@@ -423,6 +425,8 @@ Class PM_DormantReaver : PMDeathMonsterBase
 
 Class PM_SoulReaverShot : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     Radius 2;
@@ -492,6 +496,8 @@ Class PM_SoulReaverShot : Actor
 
 Class PM_SoulReaverArbalest : Actor
 {
+	mixin lzdoomCompat;
+	
  int lifetime;
  Default
  {
@@ -638,6 +644,8 @@ States
 
 Class PM_SoulReaverSeeker : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     Radius 5;
@@ -904,6 +912,8 @@ Class PM_SmallSoulReaverBall : PM_SmallSoulHarvesterBall { Default { SeeSound ""
 
 Class PM_SoulReaverSoulgun : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     Radius 4;
@@ -1006,6 +1016,8 @@ Class PM_SoulReaverSoulgun : Actor
 //Miniboss Version
 Class PM_PreSoulReaver : PM_DormantReaver
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Tag "Unusual Dormant Reaver";
@@ -1167,6 +1179,8 @@ Class PM_PreSoulReaver : PM_DormantReaver
 
 Class PM_SoulReaver : PMDeathMonsterBase
 {
+	mixin lzdoomCompat;
+	
   int rush, deathwither;
   bool charging;
   Default
@@ -1359,15 +1373,16 @@ Class PM_SoulReaver : PMDeathMonsterBase
 				if (distance3D(it.thing) <= succ_range)
 				{
 					it.Thing.vel *= 0.1;	
-					it.thing.Vel3DFromAngle(-(rad / 23), self.AngleTo(it.thing), self.PitchTo(it.thing));
+					//it.thing.Vel3DFromAngle(-(rad / 23), self.AngleTo(it.thing), self.PitchTo(it.thing));
+					it.thing.Vel3DFromAngle(-(rad / 23), self.AngleTo(it.thing), GetPitchTo(self, it.thing));
 				}
 				
 				if(distance3D(it.thing) <= 50)
 				{
 					self.A_StartSound("Exalted/SuperCast", CHAN_BODY);
-					it.thing.A_SpawnParticleEx
-					( "", TexMan.CheckForTexture("SPKOS0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
-					lifetime: random(35,65), size: 50, startalphaf: 1, sizestep: 5, startroll: random(-180,180), rollvel: frandom(-5, 5));
+					//it.thing.A_SpawnParticleEx
+					//( "", TexMan.CheckForTexture("SPKOS0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
+					//lifetime: random(35,65), size: 50, startalphaf: 1, sizestep: 5, startroll: random(-180,180), rollvel: frandom(-5, 5));
 					
 					power += 1;
 					if (it.thing is "PM_Blot") power += 5;
@@ -2098,6 +2113,8 @@ Class PM_SoulReaver : PMDeathMonsterBase
 
 Class PM_ReaverSoulVomit : Actor
 {
+	mixin lzdoomCompat;
+	
 	int soulhspeed;
 	int soulvspeed;
 	int soulhdist;
@@ -2194,6 +2211,8 @@ Class PM_ReaverSoulVomit : Actor
 
 Class PM_SoulReaverLaser : PM_DraugrLightningArcs
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   Speed 50;
@@ -2243,6 +2262,8 @@ Class PM_SoulReaverLaser : PM_DraugrLightningArcs
 
 Class PM_SoulReaverMadSouls : Actor
 {
+	mixin lzdoomCompat;
+	
 	int soulhspeed;
 	int soulvspeed;
 	int soulhdist;

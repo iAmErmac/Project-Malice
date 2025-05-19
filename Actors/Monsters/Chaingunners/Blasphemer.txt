@@ -1,5 +1,7 @@
 Class PM_Blasphemer : PMPrideMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore 
@@ -884,6 +886,8 @@ Class PM_Blasphemer : PMPrideMonsterBase
 
 Class PM_BlasphemerBall : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
    Default
    {
 	Radius 5;
@@ -1069,6 +1073,8 @@ Class PM_BlasphemerBall : DoomImpBall
 
 Class PM_BlasphemerWeaver : PM_BlasphemerBall
 {
+	mixin lzdoomCompat;
+	
    Default
    {
 	DamageFunction 20;
@@ -1223,6 +1229,8 @@ Class PM_BlasphemerWeaver : PM_BlasphemerBall
 
 Class PM_BlashemerBHBall : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
    Height 3;
@@ -1377,6 +1385,8 @@ Class PM_BlasSigilGoAway : Inventory
 
 Class PM_BlasphemerFireball : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 6;

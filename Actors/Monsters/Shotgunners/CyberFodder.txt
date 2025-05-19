@@ -235,6 +235,8 @@ Class PM_CyberFodder : PMWarMonsterBase
 
 Class PM_CyberFodderBall : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     Radius 6;

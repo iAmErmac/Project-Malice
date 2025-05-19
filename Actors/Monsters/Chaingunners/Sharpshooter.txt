@@ -1,5 +1,7 @@
 Class PM_Sharpshooter : PMEnvyMonsterBase
 {
+	mixin lzdoomCompat;
+	
   int retreat;
   int annoyed;
   int standoff;
@@ -260,6 +262,8 @@ Class PM_Sharpshooter : PMEnvyMonsterBase
 
 Class PM_SniperBullet : PM_SlugBullet
 {
+	mixin lzdoomCompat;
+	
  Default
  {
   Speed 56;

@@ -18,6 +18,8 @@ Class MasonSpawnTable : RandomSpawner
 
 Class PM_FleshMason : PMGluttonyMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -122,7 +124,7 @@ Class PM_FleshMason : PMGluttonyMonsterBase
 			Actor a = toRaise[i];
 
 			masonRaiseEffect(a.pos);
-			a.A_SpawnParticleEx("ff0000",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(80, 160),size: frandom(50, 150),xoff: random(-65, 65), yoff: random(-65, 65),velz: frandom(.3, 8),startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
+			/*a.A_SpawnParticleEx("ff0000",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(80, 160),size: frandom(50, 150),xoff: random(-65, 65), yoff: random(-65, 65),velz: frandom(.3, 8),startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
 			a.A_SpawnParticleEx("ff0000", tex[2], STYLE_Add, SPF_RELATIVE|SPF_ROLL, random(20, 50), random(40,200), xoff: 15, zoff: 60, startalphaf: frandom(.2, .9), sizestep: frandom(0, 1), startroll: random(-180,180), rollvel: frandom(-4, 4));
 			a.A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,70),size: frandom(0.2,10),xoff: random(-150, 150),yoff: random(-150,150),zoff: random(-5,5),velx: frandom(-0.6,0.6),vely: frandom(-0.6,0.6),velz: frandom(1,8),startalphaf: 1.0,fadestepf: -1,sizestep: -0.2,startroll: random(-180,180));
 			for(int i=random(4,5);i>0;i--)
@@ -130,7 +132,7 @@ Class PM_FleshMason : PMGluttonyMonsterBase
 			for(int i=random(3,5);i>0;i--)
 			a.A_SpawnItemEx("PM_PestilenceBloodMulti",0,0,32,random(-1,1),random(-1,1),random(-1,1),frandom(0,360),SXF_NOCHECKPOSITION|SXF_ABSOLUTEVELOCITY);
 			a.A_SpawnItemEx("PM_PestilenceBloodMist",0,0,32,random(-1,1),random(-1,1),random(-1,1),frandom(0,360),SXF_NOCHECKPOSITION|SXF_ABSOLUTEVELOCITY);
-			a.A_StartSound("GBloodSplashBig",CHAN_7,CHANF_DEFAULT,0.75);
+			a.A_StartSound("GBloodSplashBig",CHAN_7,CHANF_DEFAULT,0.75);*/
 			
 			let s = spawn("MasonSpawnTable", a.pos);
 			s.angle = random(1, 8) * 45;
@@ -378,6 +380,8 @@ Class PM_FleshMason : PMGluttonyMonsterBase
 
 Class PM_MasonBall : PM_BloodSpit
 {
+	mixin lzdoomCompat;
+	
 	int pm_masonballnum;
 	Default
 	{
@@ -456,6 +460,8 @@ Class PM_MasonBall : PM_BloodSpit
 
 Class PM_MasonHeart : PM_BeholderEye
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Health 120;
@@ -533,6 +539,8 @@ Class PM_MasonHeart : PM_BeholderEye
 
 Class PM_MasonHeartAttack : PM_BeholderEyeAttack
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Speed 33;
@@ -593,6 +601,8 @@ Class PM_MasonHeartAttack : PM_BeholderEyeAttack
 
 Class PM_MasonRune : ArchvileFire
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		+FLATSPRITE
@@ -663,6 +673,8 @@ Class PM_MasonRune : ArchvileFire
 
 Class PM_MasonPortGeyser : ArchvileFire
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		+FLATSPRITE

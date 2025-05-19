@@ -64,7 +64,8 @@ Class PM_UmbralHorrorspawn : PMUmbralMonsterBase
 	{
 		if (target)
 		{
-			double TAngle= atan2(self.pos.xy-target.pos.xy);
+			let diff = self.pos.xy-target.pos.xy;
+			double TAngle= atan2(diff.x, diff.y);
 			double TPitch= atan2(target.pos.z-pos.z,(target.pos.xy-self.pos.xy).length());
 			double SAngle= absangle(target.angle,TAngle);
 			double SPitch= absangle(target.pitch,TPitch);

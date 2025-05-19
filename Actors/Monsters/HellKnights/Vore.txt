@@ -1,5 +1,7 @@
 Class PM_Vore : PMEnvyMonsterBase
 {
+	mixin lzdoomCompat;
+	
   bool sigil;
   Default
   {
@@ -734,6 +736,8 @@ Class PM_Vore : PMEnvyMonsterBase
 
 Class PM_VoreDagger : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
     Radius 5;
@@ -793,6 +797,8 @@ Class PM_VoreDagger : Actor
 
 Class PM_VoreSmallDagger : PM_VoreDagger
 {
+	mixin lzdoomCompat;
+	
    int pm_voredaggernum;
    Default
    {
@@ -863,6 +869,8 @@ Class PM_VoreSmallDagger : PM_VoreDagger
 
 Class PM_VoreOrbSummon : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   Scale 0.25;
@@ -921,6 +929,8 @@ Class PM_VoreReleaseToken : Inventory { Default { Inventory.MaxAmount 1; } }
 
 Class PM_CopyWhiplashGroundSeeker : PM_WhiplashGroundSeeker
 {
+	mixin lzdoomCompat;
+	
  Default
  {
  Translation "0:255=%[0,0,0]:[0.0,0.8,0.0]";
@@ -977,6 +987,8 @@ States
 
 Class PM_CopyLandrazerComet : PM_LandrazerComet
 {
+	mixin lzdoomCompat;
+	
    Default
    {
     RenderStyle "Add";

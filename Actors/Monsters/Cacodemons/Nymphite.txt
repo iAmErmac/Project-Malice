@@ -1,5 +1,7 @@
 Class PM_Nymphite : PMLustMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -278,6 +280,8 @@ Class PM_NymphiteMeatChunkLauncher : PM_NormalMeatChunkLauncher
 
 Class PM_NymphiteInfantBall : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
 	int user_phspeed;
 	int user_pvspeed;
 	int user_phdist;

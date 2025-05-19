@@ -516,6 +516,8 @@ Class PM_NormalBlood1 : Actor
 
 Class PM_NormalHitSpark : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	+CLIENTSIDEONLY
@@ -2133,6 +2135,8 @@ Class PM_LavaBloodEx : RandomSpawner
 
 Class PM_LavaMeatChunk : PM_NormalMeatChunk
 {
+	mixin lzdoomCompat;
+	
 	Default { Translation "0:255=%[0,0,0]:[2.0,0.6,0.2]"; +BRIGHT }
 	States
 	{
@@ -2224,6 +2228,8 @@ Class PM_LavaBlood1 : PM_NormalBlood1
 
 Class PM_LavaBlood2 : PM_LavaBlood1
 {
+	mixin lzdoomCompat;
+	
 	Default { +BRIGHT }
 	States
 	{
@@ -2297,6 +2303,8 @@ Class PM_LavaBlood2 : PM_LavaBlood1
 
 Class PM_LavaBlood3 : PM_NormalBlood3
 {
+	mixin lzdoomCompat;
+	
 	Default { +BRIGHT }
 	States
 	{
@@ -2402,6 +2410,8 @@ Class PM_LavaBloodMulti : PM_NormalBloodMulti
 
 Class PM_LavaBloodMist : PM_NormalBloodMist
 {
+	mixin lzdoomCompat;
+	
 	Default { +BRIGHT }
  States
  {
@@ -2470,6 +2480,8 @@ Class PM_DeathBloodEx : RandomSpawner
 
 Class PM_DeathBlood1 : PM_NormalBlood1
 {
+	mixin lzdoomCompat;
+	
 	States
 	{
 	Spawn:
@@ -2522,6 +2534,8 @@ Class PM_DeathBlood1 : PM_NormalBlood1
 
 Class PM_DeathBlood2 : PM_NormalBlood1
 {
+	mixin lzdoomCompat;
+	
 	States
 	{
 	Spawn:
@@ -2589,6 +2603,8 @@ Class PM_DeathBlood2 : PM_NormalBlood1
 
 Class PM_DeathBlood3 : PM_NormalBlood1
 {
+	mixin lzdoomCompat;
+	
 	States
 	{
 	Spawn:
@@ -2660,6 +2676,8 @@ Class PM_DeathBloodMulti : PM_NormalBloodMulti
 
 Class PM_DeathBloodMist : PM_NormalBloodMist
 {
+	mixin lzdoomCompat;
+	
 	Default { +BRIGHT }
  States
  {
@@ -2790,6 +2808,8 @@ Class PM_WarBlood : RandomSpawner
 
 Class PM_WarMeatChunk : PM_NormalMeatChunk
 {
+	mixin lzdoomCompat;
+	
 	Default { Translation "0:255=%[0,0,0]:[0.3,0.3,0.3]"; }
 	States
 	{

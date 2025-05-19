@@ -1,5 +1,7 @@
 Class PM_AngelsHand : PMPrideMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -301,6 +303,8 @@ Class PM_AngelOrbitSpawn : PM_ExaltedCultSummon
 
 Class PM_AngelHOrbit : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Translation "0:255=%[0.00,0.00,0.00]:[2.00,0.52,0.52]";
@@ -386,6 +390,8 @@ Class PM_AngelsHandBHBall : PM_BlashemerBHBall { Default { Speed 25; +NEVERFAST 
 
 Class PM_AngelsHandWings : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Scale 0.15;

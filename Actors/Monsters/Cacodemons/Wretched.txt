@@ -1,5 +1,7 @@
 Class PM_Wretched : PMUnaffMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -363,6 +365,8 @@ Class PM_Wretched : PMUnaffMonsterBase
 
 Class PM_WretchedBall : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 5;

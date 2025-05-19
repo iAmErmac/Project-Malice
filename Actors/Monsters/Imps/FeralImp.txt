@@ -486,6 +486,8 @@ Class PM_FeralImpSpitFireball : PM_CharredBall
 
 Class PM_FeralImpBall : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	DamageFunction 14;
@@ -537,6 +539,8 @@ Class PM_FeralImpBall : DoomImpBall
 
 Class PM_FeralImpIreball : PM_FeralImpBall
 {
+	mixin lzdoomCompat;
+	
   Default
   {
    Speed 24;

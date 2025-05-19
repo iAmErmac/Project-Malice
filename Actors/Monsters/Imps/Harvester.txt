@@ -1,5 +1,7 @@
 Class PM_Harvester : PMDeathMonsterBase
 {
+	mixin lzdoomCompat;
+	
   bool phase;
   int phasetimer;
   Default
@@ -389,6 +391,8 @@ Class OrbitSpirit2 : OrbitSpirit
 
 Class PM_SoulHarvesterBall : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     Radius 5;
@@ -517,6 +521,8 @@ Class PM_SmallSoulBallTrail : Actor
 
 Class PM_SmallSoulHarvesterBall : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     Radius 5;
@@ -672,6 +678,8 @@ Class HSummonedSoul : Actor
 
 Class PM_HSummonedSoulBall : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
    Height 3;

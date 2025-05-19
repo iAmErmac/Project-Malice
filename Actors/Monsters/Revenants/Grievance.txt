@@ -1,5 +1,7 @@
 Class PM_Grievance : PMEnvyMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	bool sigil;
 	
 	Default
@@ -442,6 +444,8 @@ Class PM_Grievance : PMEnvyMonsterBase
 //Normal Attacks
 Class PM_GrievanceRocket : RevenantTracer
 {
+	mixin lzdoomCompat;
+	
 	int pm_grievancerocketnum;
     Default
     {
@@ -567,6 +571,8 @@ Class PM_GrievanceRocket : RevenantTracer
 
 Class PM_GrievanceSmokeCloud : PM_HostSmokeCloud
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     BounceFactor 0.2;
@@ -598,6 +604,8 @@ Class PM_GrievanceSmokeCloud : PM_HostSmokeCloud
 
 Class PM_GrievanceFailedGrenade : Rocket
 {
+	mixin lzdoomCompat;
+	
   int grenadetime;
   Default
   {
@@ -699,6 +707,8 @@ Class PM_GrievanceFailedGrenade : Rocket
 
 Class PM_GrievanceSeeker : WickedShot
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		+SEEKERMISSILE
@@ -725,6 +735,8 @@ Class PM_GrievanceSeeker : WickedShot
 
 Class PM_GrievanceStealthBazooka : PM_GrievanceRocket
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 3;
@@ -801,6 +813,8 @@ Class PM_GrievanceStealthBazooka : PM_GrievanceRocket
 //Copy Attacks
 Class PM_CopyHuskMeteor : PM_HuskMeteor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   RenderStyle "AddShaded";
@@ -837,6 +851,8 @@ Class PM_CopyHuskMeteor : PM_HuskMeteor
 
 Class PM_CopyHuskMeteorFire : PM_HuskMeteorFire
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   RenderStyle "AddShaded";
@@ -877,6 +893,8 @@ Class PM_CopyHuskMeteorFire : PM_HuskMeteorFire
 
 Class PM_CopyFiendHomingMissile : PM_FiendHomingMissile
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Decal "PM_GreenFireScorch";
@@ -937,6 +955,8 @@ Class PM_CopyFiendHomingMissile : PM_FiendHomingMissile
 
 Class PM_CopyCadaverHRocket : PM_CadaverHRocket
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Decal "PM_GreenFireScorch";
@@ -1014,6 +1034,8 @@ Class PM_CopyHomingFlare : Actor
 
 Class PM_GrievanceNeedle : PM_NailgunnerNail 
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		DamageFunction 5;

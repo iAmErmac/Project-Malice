@@ -534,6 +534,8 @@ Class PM_Noble : PMMonsterBase
 
 Class PM_NobleFireball : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	+NOGRAVITY

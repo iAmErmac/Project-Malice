@@ -15,8 +15,9 @@ class PM_CodexMenu : ListMenu
 		string sin = split[2];
 		SelectedIndex = -1;
 
-		foreach (cls : AllActorClasses)
+		for (int i = 0; i < AllActorClasses.size(); i++)
 		{
+			let cls = AllActorClasses[i];
 			let pmCls = (class<PMMonsterBase>)(cls);
 			if (pmCls && !pmCls.IsAbstract())
 			{
@@ -78,7 +79,8 @@ class PM_CodexMenu : ListMenu
 			Vector2 offset = TexMan.GetScaledOffset(tex);
 			double diff = offset.Y - size.Y; // [Ace] Account for floating monsters.
 
-			img.Init(mDesc, x, y + diff, tex);
+			//img.Init(mDesc, x, y + diff, tex);
+			img.Init(x, y + diff, tex);
 			MonsterInfo.Push(img);
 			y += 10;
 
@@ -120,9 +122,13 @@ class PM_CodexMenu : ListMenu
 				}
 			}
 		}
-		else foreach (m : MonsterInfo)
+		else
 		{
-			m.Draw(false, mDesc);
+			for(int i = 0; i < MonsterInfo.size(); i++)
+			{
+				let m = MonsterInfo[i];
+				m.Draw(false, mDesc);
+			}
 		}
 	}
 }

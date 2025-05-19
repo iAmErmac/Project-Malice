@@ -1,5 +1,7 @@
 Class PM_HellifiedSoldier : PMUnaffMonsterBase
 { 
+	mixin lzdoomCompat;
+	
     Default
 	{
 	PMMonsterBase.CodexLore
@@ -204,6 +206,8 @@ Go:
 
 Class PM_HellifiedSoldierBall : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
    Default
    {
      Height 3;
@@ -312,6 +316,8 @@ Class HellifiedSoldierPuff : Actor
 
 Class PM_HellifiedSoldierChargeBall : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
    Height 3;

@@ -1,5 +1,7 @@
 Class PM_Infernal : PMWrathMonsterBase
 {
+	mixin lzdoomCompat;
+	
   Default
 	{
 		PMMonsterBase.CodexLore
@@ -352,6 +354,8 @@ Class PM_Infernal : PMWrathMonsterBase
 
 Class PM_InfernalFireball : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   Scale 0.75;
@@ -415,6 +419,8 @@ Class PM_InfernalFireball : DoomImpBall
 
 Class PM_InfernalLavaBall : CacodemonBall
 {
+	mixin lzdoomCompat;
+	
   Default
   {
 	Scale 0.3;

@@ -204,6 +204,8 @@ LMissileLoopNoLead:
 
 Class PM_CorpulentBall : Fatshot
 {
+	mixin lzdoomCompat;
+	
   Default
   {
    PROJECTILE;

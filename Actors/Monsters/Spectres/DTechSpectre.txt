@@ -1,5 +1,7 @@
 Class PM_DemonTechSpectre : PMWarMonsterBase
 { 
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	//$Category "PM_Monsters/Spectres"
@@ -396,6 +398,8 @@ Class PM_DemonTechSpectre : PMWarMonsterBase
 
 Class PM_DTechSpectreShot : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
    Projectile;
@@ -475,6 +479,8 @@ Class PM_DTechSpectreArm : Actor
 
 Class PM_DTechSpectreSniperTracer : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
    Height 4;

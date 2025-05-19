@@ -1,5 +1,7 @@
 Class PM_GraveGuard : PMDeathMonsterBase
 {
+	mixin lzdoomCompat;
+	
     int deathwither;
     Default
 	{
@@ -365,6 +367,8 @@ Class PM_GraveGuard : PMDeathMonsterBase
 
 Class PM_HellsFuryBall : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
     {
     Radius 6;
@@ -490,6 +494,8 @@ Class PM_HFuryThrowFire : PM_RedFireEffect
 
 Class HellsFurySkull : Actor
 {
+	mixin lzdoomCompat;
+	
     int timer;
     Default
 	{
@@ -622,6 +628,8 @@ Class PM_BlueDropFire : ZombieDropFire
 
 Class PM_HellsFurySoul : Actor
 {
+	mixin lzdoomCompat;
+	
 	int soulhspeed;
 	int soulvspeed;
 	int soulhdist;
@@ -819,6 +827,8 @@ Class PM_HFuryFirebreath : PM_CyberFodderFire
 
 Class PM_GGuardFocusedLightning : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
  Projectile;

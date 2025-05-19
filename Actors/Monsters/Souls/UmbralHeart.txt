@@ -1,5 +1,7 @@
 Class PM_UmbralHeart : PMUmbralMonsterBase
 {
+	mixin lzdoomCompat;
+	
   Default
   {
 	//$Category "PM_Monsters/Souls"

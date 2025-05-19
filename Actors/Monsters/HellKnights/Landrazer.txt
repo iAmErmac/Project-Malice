@@ -1,5 +1,7 @@
 Class PM_Landrazer : PMWrathMonsterBase
 {
+	mixin lzdoomCompat;
+	
     int standoff;
 	int user_leapstrength;
     Default
@@ -387,6 +389,8 @@ Class PM_Landrazer : PMWrathMonsterBase
 
 Class PM_LandrazerMissile : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
    int timer;
    int phspeed;
    int pvspeed;
@@ -447,6 +451,8 @@ Class PM_LandrazerMissile : PMProjectileBase
 
 Class PM_LandrazerMeteor : PM_HuskMeteor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
     Speed 20;
@@ -499,6 +505,8 @@ Class PM_LandrazerFirebomb : PM_HuskFirebomb
 
 Class PM_LandrazerComet : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
     Radius 13;

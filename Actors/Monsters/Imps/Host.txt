@@ -1,5 +1,7 @@
 Class PM_Host : PMPestilenceMonsterBase
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	//$Category "PM_Monsters/Imps"
@@ -601,6 +603,8 @@ Class PM_HostSmokeCloud : Actor
 
 Class PM_HostSmokeCloud2 : PM_HostSmokeCloud
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     BounceFactor 0.2;

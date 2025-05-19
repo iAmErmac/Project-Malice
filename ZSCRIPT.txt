@@ -1,4 +1,4 @@
-version "4.10.0"
+version "4.6"
 #include "Actors/Monsters/ZProjectiles.txt"
 #include "Actors/Monsters/MonsterBase.txt"
 #include "Actors/SFX/ZFX.txt"
@@ -171,3 +171,6 @@ version "4.10.0"
 
 //Fodder
 #include "Actors/Monsters/Fodder/Pustule.txt"
+
+//Compatibility fix for QZD
+#include "Actors/qzdCompatibility.txt"

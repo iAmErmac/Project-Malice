@@ -255,6 +255,8 @@ Class PM_Exile : PMUnaffMonsterBase
 
 Class PM_ExileRessurectFire : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	+NOBLOCKMAP 
@@ -767,6 +769,8 @@ Class NewArchvileFire2 : Actor
 
 Class ExileFireHit : NewArchvileFire
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		+SEEKERMISSILE
@@ -907,6 +911,8 @@ override void PostBeginPlay()
 
 Class ExileAttackFire : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		+NoClip
@@ -1069,6 +1075,8 @@ Class PM_ExileOrbShower : Actor
 
 Class PM_ExileOrb : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 6;

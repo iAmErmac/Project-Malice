@@ -460,6 +460,8 @@ MissileLead:
 
 Class PM_FiendHomingMissile : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 2;
@@ -561,6 +563,8 @@ Spawn:
 
 Class PM_FiendSmallRocket : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 2;

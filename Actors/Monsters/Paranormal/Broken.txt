@@ -1,6 +1,7 @@
 class PM_Broken : PMVoidMonsterBase
 {
-
+	mixin lzdoomCompat;
+	
 	int screems,WaitTillSHoot,Glide,Shooting,NADES,LOOKINGAT,vfgcharge;
 
 	Default
@@ -747,6 +748,8 @@ class PM_Broken : PMVoidMonsterBase
 
 Class PM_BrokenDeathAura : Actor
 {
+	mixin lzdoomCompat;
+	
  Default
  {
  +NOGRAVITY
@@ -870,6 +873,8 @@ Class PM_BrokenPelletTracer : PM_PelletTracer
 
 Class PM_BrokenPlasmaShot : Actor
 {
+	mixin lzdoomCompat;
+	
  Default
  {
   Radius 6;
@@ -924,6 +929,8 @@ Class PM_BrokenPlasmaShot : Actor
 
 Class PM_BrokenRailSlug : Actor
 {
+	mixin lzdoomCompat;
+	
  Default
  {
   Radius 6;
@@ -975,6 +982,8 @@ Class PM_BrokenRailSlug : Actor
 
 Class PM_BrokenVFGBall : Actor
 {
+	mixin lzdoomCompat;
+	
  protected int time;
  Default
  {
@@ -1073,6 +1082,8 @@ Class PM_BrokenVFGBall : Actor
 
 Class PM_BrokenVFGSoul : Actor
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
     Radius 6;

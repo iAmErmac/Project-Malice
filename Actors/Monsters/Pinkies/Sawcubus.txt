@@ -1,5 +1,7 @@
 Class PM_Sawcubus : PMFamineMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore

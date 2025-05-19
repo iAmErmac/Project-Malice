@@ -451,6 +451,8 @@ Class PM_Devil : PMUnaffMonsterBase
 
 Class PM_DevilImpBall : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	DamageFunction 12;

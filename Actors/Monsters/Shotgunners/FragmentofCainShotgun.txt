@@ -1,5 +1,7 @@
 Class PM_FOCShotgun : PMVoidMonsterBase
 { 
+	mixin lzdoomCompat;
+	
     int cainphase;
 	Default
 	{

@@ -314,6 +314,8 @@ Class PM_InfestedRotfly : PM_Rotfly
 
 Class PM_InfestedRotflyKamikaze : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   Speed 18;

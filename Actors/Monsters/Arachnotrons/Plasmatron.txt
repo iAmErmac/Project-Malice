@@ -299,6 +299,8 @@ Class PlasmatronFlare : Actor
 
 Class PM_PTronBall : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Height 7;
@@ -359,6 +361,8 @@ Class PM_PTronBall : Actor
 
 Class PM_PTronBallSmall : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Height 5;
@@ -494,6 +498,8 @@ Class PM_PTronBallTrailSmall2 : Actor
 
 Class PM_PTronScatterBall : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Height 7;
@@ -566,6 +572,8 @@ Class PM_PTronScatterBall : Actor
 
 Class PM_PTronScatterBomb : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Height 7;

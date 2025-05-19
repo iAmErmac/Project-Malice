@@ -1,6 +1,7 @@
 Class PM_EntropicAvatar : PMVoidMonsterBase
 {
-
+	mixin lzdoomCompat;
+	
 	int MeleeSwings;
 
 	Default
@@ -757,6 +758,8 @@ Class PM_EntropicAvatar : PMVoidMonsterBase
 
 Class PM_AvatarFreezeBreath : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 4;
@@ -850,6 +853,8 @@ Class PM_AvatarFreezeBreath : Actor
 
 class PM_EAvatarBall : Actor
 {
+	mixin lzdoomCompat;
+	
 Default
 {
   Speed 28;
@@ -965,6 +970,8 @@ Default
 
 Class PM_EAvatarSoulVomit : Actor
 {
+	mixin lzdoomCompat;
+	
 	int soulhspeed;
 	int soulvspeed;
 	int soulhdist;
@@ -1106,6 +1113,8 @@ Class PM_EAvatarSoulVomit : Actor
 
 Class PM_EAvatarVoidSeeker : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
    Radius 12;

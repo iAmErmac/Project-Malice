@@ -168,6 +168,8 @@ Class PM_Sybarite : PMLustMonsterBase
 
 Class PM_SybGrenade : PM_ZTrooperFragGrenade
 {
+	mixin lzdoomCompat;
+	
  int timer;
  Default
  {
@@ -220,6 +222,8 @@ Class PM_SybGrenade : PM_ZTrooperFragGrenade
 
 Class PM_SybGrenadeTick : Actor
 {
+	mixin lzdoomCompat;
+	
     int wait;
     Default
 	{

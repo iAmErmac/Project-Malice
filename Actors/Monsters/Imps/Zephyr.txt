@@ -462,6 +462,8 @@ Class PM_Zephyr : PMUnaffMonsterBase
 
 Class PM_FastImpBall : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	DamageFunction (11);

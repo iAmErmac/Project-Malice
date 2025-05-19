@@ -1,5 +1,7 @@
 Class PM_SpawnOfBelphegor : PMSlothMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -283,6 +285,8 @@ Class PM_SpawnOfBelphegor : PMSlothMonsterBase
 
 Class PM_BelphegorChainShot : PM_NailgunnerNail 
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		DamageFunction 7;
@@ -336,6 +340,8 @@ Class PM_BelphegorChainShotBlur : PM_NailgunnerNailBlur { Default { Scale 1.35; 
 
 Class PM_BelphegorCelestialTwilight : BaronBall
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		SeeSound "PMBelphegor/TwilightFire";
@@ -478,6 +484,8 @@ Class PM_BelphegorCelestialTwilight : BaronBall
 
 Class PM_BelphegorGrenade : Rocket 
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		DamageFunction 20;

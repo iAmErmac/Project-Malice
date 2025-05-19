@@ -1,5 +1,7 @@
 Class PM_PhaseCaco : PMUnaffMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -331,6 +333,8 @@ Class PM_PhaseCaco : PMUnaffMonsterBase
 
 Class PM_PhaseCacoBall : Actor
 {
+	mixin lzdoomCompat;
+	
 	int user_phspeed;
 	int user_pvspeed;
 	int user_phdist;

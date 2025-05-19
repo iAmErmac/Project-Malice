@@ -1,5 +1,7 @@
 Class PM_VoidFloater : PMVoidMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore
@@ -571,6 +573,8 @@ Class PM_FloaterFlee : Actor
 
 Class PM_FloaterBall : CacodemonBall
 {
+	mixin lzdoomCompat;
+	
   Default
   {
 	DamageFunction (35);
@@ -627,6 +631,8 @@ Class PM_FloaterBall : CacodemonBall
 
 Class PM_FloaterLaser : FastProjectile
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   +RIPPER

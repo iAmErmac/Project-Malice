@@ -234,6 +234,8 @@ Class PM_Cadaver : PMUnaffMonsterBase
 
 Class PM_CadaverRocket : RevenantTracer
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 2;
@@ -286,6 +288,8 @@ Class PM_CadaverRocket : RevenantTracer
 
 Class PM_CadaverHRocket : RevenantTracer
 {
+	mixin lzdoomCompat;
+	
     Default
     {
 	Radius 2;

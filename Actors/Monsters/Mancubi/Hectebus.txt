@@ -150,6 +150,8 @@ Class PM_Hectebus : PMUnaffMonsterBase
 
 Class PM_HectebusBall : Fatshot
 {
+	mixin lzdoomCompat;
+	
  Default
  {
  PROJECTILE;

@@ -1,5 +1,7 @@
 Class PM_Gazer : PMPrideMonsterBase
 {
+	mixin lzdoomCompat;
+	
   bool gazer;
   
   Default
@@ -489,6 +491,8 @@ Class PM_GazerPentagram : Actor
 
 Class PM_GazerBall : Actor
 {
+	mixin lzdoomCompat;
+	
    Default
    {
    Height 3;

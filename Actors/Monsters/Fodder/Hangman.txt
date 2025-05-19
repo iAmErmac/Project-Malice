@@ -110,6 +110,8 @@ Class PM_Hangman : PMFodderMonsterBase
 
 Class PM_HangmanSpit : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		DamageFunction 5;

@@ -227,6 +227,8 @@ Class PM_GrossElemental : PMPestilenceMonsterBase
 
 Class PM_GElemVenomBurst : CacodemonBall
 {
+	mixin lzdoomCompat;
+	
     Default
     {
     Speed 25;

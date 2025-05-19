@@ -247,6 +247,8 @@ Class PM_Charred : PMUnaffMonsterBase
 
 Class PM_CharredBall : DoomImpBall
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   Renderstyle "Add";
@@ -316,6 +318,8 @@ Class PM_CharredBall : DoomImpBall
 
 Class PM_CharredBallNoGravity : PM_CharredBall
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	+NOGRAVITY
@@ -363,6 +367,8 @@ Class PM_CharredBallNoGravityFast : PM_CharredBallNoGravity
 
 Class PM_CharredBarrageBall : PM_CharredBall
 {
+	mixin lzdoomCompat;
+	
     Default
 	{
 	+NOGRAVITY

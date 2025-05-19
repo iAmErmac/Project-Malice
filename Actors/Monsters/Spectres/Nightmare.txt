@@ -1,5 +1,7 @@
 Class PM_Nightmare : PMUmbralMonsterBase
 {
+	mixin lzdoomCompat;
+	
   Default
   {
 	//$Category "PM_Monsters/Spectres"

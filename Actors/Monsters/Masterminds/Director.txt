@@ -1,5 +1,7 @@
 Class PM_Director : PMUnaffMonsterBase
 {
+	mixin lzdoomCompat;
+	
     int misangle2;
     int misangle;
     int attackmode;
@@ -897,6 +899,8 @@ Class PM_Director : PMUnaffMonsterBase
 
 Class PM_DirectorAStrikeShotTell : Actor
 {
+	mixin lzdoomCompat;
+	
  int timer;
  int secondtimer;
  Default
@@ -1011,6 +1015,8 @@ Class PM_DirectorAStrikeShotTell : Actor
 
 Class PM_DirectorMissile : PM_TyrantStreamRocket
 {
+	mixin lzdoomCompat;
+	
  int timer;
  Default
  {
@@ -1057,6 +1063,8 @@ Class PM_DirectorMissile : PM_TyrantStreamRocket
 
 Class PM_DirectorPlasmaShot : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
   Default
   {
    Projectile;
@@ -1141,6 +1149,8 @@ Class PM_DirectorPlasmaShot : PMProjectileBase
 
 Class PM_DirectorBFGBall : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
    Projectile;
@@ -1234,6 +1244,8 @@ Class PM_DirectorBFGBall : Actor
 
 Class PM_DirectorBigPlasmaBall : PM_DirectorPlasmaShot
 {
+	mixin lzdoomCompat;
+	
    vector3 weave;
    int wait;
    Default
@@ -1316,6 +1328,8 @@ Class PM_DirectorBigPlasmaBall : PM_DirectorPlasmaShot
 
 Class PM_DirectorPlasmaLaser : FastProjectile
 {
+	mixin lzdoomCompat;
+	
   Default
   {
    Projectile;
@@ -1372,6 +1386,8 @@ Class PM_DirectorPlasmaLaser : FastProjectile
 
 Class PM_DirectorUraniumTracer : PM_DirectorTracer
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Speed 120;
@@ -1445,6 +1461,8 @@ Class PM_DirectorUraniumTracer : PM_DirectorTracer
 
 Class PM_DirectorAutocannonracer : PM_DirectorTracer
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Speed 80;
@@ -1518,6 +1536,8 @@ Class PM_DirectorAutocannonracer : PM_DirectorTracer
 
 Class PM_DirectorWarning : Actor
 {
+	mixin lzdoomCompat;
+	
   override void PostBeginPlay()
   {
 	A_SpawnParticleEx("ff2424", TexMan.CheckForTexture("RLSSA0"), STYLE_ADD, SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL, 1, 10, 0, frandom(-1, 1), frandom(-1, 1), frandom(-1, 1));
@@ -1528,6 +1548,8 @@ Class PM_DirectorWarning : Actor
 
 Class PM_DirectorControlledRock : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Monster;
@@ -1604,6 +1626,8 @@ Class PM_DirectorControlledRock : Actor
 
 Class PM_PsiRockLaunch : PM_DirectorTracer
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Scale 1.65;
@@ -1668,6 +1692,8 @@ Class PM_PsiRockLaunch : PM_DirectorTracer
 
 Class PM_DirectorHallucinationSummon : PM_ExaltedCultSummon
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   Speed 12;
@@ -2104,6 +2130,8 @@ Class PM_DirectorResistanceGiver : Inventory
 
 Class PM_DirectorResistance : PowerProtection
 {
+	mixin lzdoomCompat;
+	
   Default
   {
 	+INVENTORY.ALWAYSPICKUP;
@@ -2117,12 +2145,12 @@ Class PM_DirectorResistance : PowerProtection
 	if (owner && owner.health > 0)
 	{
 		owner.A_AttachLight("Buff", DynamicLight.PulseLight, "6d32a8",  int(ceil( owner.radius )) * 1, int(ceil( owner.radius )) * 3);
-		for (int i = 0; i < 360; i += random(10, 50))
+		/*for (int i = 0; i < 360; i += random(10, 50))
 		{
 			owner.A_SpawnParticleEx("", TexMan.CheckForTexture("SPKPA0"), STYLE_Add, SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, random(55, 110), random(5,25), 0, frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), velx: frandom(-1, 1), vely: frandom(-1, 1), velz: frandom(0.1, 5), accelz: 0.08, sizestep: -.5, startroll: random(-180,180), rollvel: frandom(-4, 4));
 			owner.A_SpawnParticleEx("7c2ec9", TexMan.CheckForTexture("GNSMK0"), STYLE_ADD, SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL, 180, 30, 0, frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), frandom(0, owner.height), frandom(-0.01, 0.01) + 5, frandom(-0.01, 0.01), frandom(0.01, -0.01), frandom(-0.25, 0.25), frandom(-0.25, 0.25), frandom(-0.25, 0.25), startalphaf: 0.85
 			, fadestepf: 0.0375, sizestep: 3.5, startroll: frandom(0, 360), rollvel: random(0, 1) ? 0.5 : -0.5);
-		}
+		}*/
 	}
   }
   
@@ -2132,8 +2160,8 @@ Class PM_DirectorResistance : PowerProtection
 	
 	if (owner && owner.health > 0 && !level.isFrozen())
 	{
-		if ((level.time % random(1, 3)) == 0)
-			owner.A_SpawnParticleEx("", TexMan.CheckForTexture("SPKPA0"), STYLE_Add, SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, random(40, 80), random(5,25), 0, frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), velx: frandom(-1, 1), vely: frandom(-1, 1), velz: frandom(0.1, 3), accelz: 0.08, sizestep: -.5, startroll: random(-180,180), rollvel: frandom(-4, 4));
+		//if ((level.time % random(1, 3)) == 0)
+			//owner.A_SpawnParticleEx("", TexMan.CheckForTexture("SPKPA0"), STYLE_Add, SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, random(40, 80), random(5,25), 0, frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), velx: frandom(-1, 1), vely: frandom(-1, 1), velz: frandom(0.1, 3), accelz: 0.08, sizestep: -.5, startroll: random(-180,180), rollvel: frandom(-4, 4));
 	}
   }
   
@@ -2144,12 +2172,12 @@ Class PM_DirectorResistance : PowerProtection
 		owner.A_StopSounds(0, 0);
 		owner.A_RemoveLight("Buff");
 		
-		for (int i = 0; i < 360; i += random(10, 50))
+		/*for (int i = 0; i < 360; i += random(10, 50))
 		{
 			owner.A_SpawnParticleEx("", TexMan.CheckForTexture("SPKPA0"), STYLE_Add, SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, random(55, 110), random(5,25), frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), velx: frandom(-1, 1), vely: frandom(-1, 1), velz: frandom(0.1, 5), accelz: 0.08, sizestep: -.5, startroll: random(-180,180), rollvel: frandom(-4, 4));
 			owner.A_SpawnParticleEx("7c2ec9", TexMan.CheckForTexture("GNSMK0"), STYLE_ADD, SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL, 180, 30, 0, frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), frandom(0, owner.height), frandom(-0.01, 0.01) + 5, frandom(-0.01, 0.01), frandom(0.01, -0.01), frandom(-0.25, 0.25), frandom(-0.25, 0.25), frandom(-0.25, 0.25), startalphaf: 0.85
 			, fadestepf: 0.0375, sizestep: 3.5, startroll: frandom(0, 360), rollvel: random(0, 1) ? 0.5 : -0.5);
-		}
+		}*/
 	}
   }
   
@@ -2160,12 +2188,12 @@ Class PM_DirectorResistance : PowerProtection
 		owner.A_StopSounds(0, 0);
 		owner.A_RemoveLight("Buff");
 		
-		for (int i = 0; i < 360; i += random(10, 50))
+		/*for (int i = 0; i < 360; i += random(10, 50))
 		{
 			owner.A_SpawnParticleEx("", TexMan.CheckForTexture("SPKPA0"), STYLE_Add, SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, random(55, 110), random(5,25), frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), velx: frandom(-1, 1), vely: frandom(-1, 1), velz: frandom(0.1, 5), accelz: 0.08, sizestep: -.5, startroll: random(-180,180), rollvel: frandom(-4, 4));
 			owner.A_SpawnParticleEx("7c2ec9", TexMan.CheckForTexture("GNSMK0"), STYLE_ADD, SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL, 180, 30, 0, frandom(owner.radius, -owner.radius), frandom(-owner.radius, owner.radius), frandom(0, owner.height), frandom(-0.01, 0.01) + 5, frandom(-0.01, 0.01), frandom(0.01, -0.01), frandom(-0.25, 0.25), frandom(-0.25, 0.25), frandom(-0.25, 0.25), startalphaf: 0.85
 			, fadestepf: 0.0375, sizestep: 3.5, startroll: frandom(0, 360), rollvel: random(0, 1) ? 0.5 : -0.5);
-		}
+		}*/
 		
 		Destroy();
 	}
@@ -2193,6 +2221,8 @@ Class PM_DirectorMindPower : Actor
 
 Class PM_DirectorPsychicLightning : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Translation "0:255=%[0.00,0.00,0.00]:[1.43,1.10,2.00]";
@@ -2333,6 +2363,8 @@ Class PM_DirectorSeekingLightning : Actor
 
 Class PM_DirectorSeekedLightning : Actor
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Translation "0:255=%[0.00,0.00,0.00]:[1.43,1.10,2.00]";
@@ -2427,6 +2459,8 @@ Class PM_DirectorSeekedLightning : Actor
 
 Class PM_DirectorPsychicHeavyLightning : PM_DirectorPsychicLightning
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 	Scale 1.6;
@@ -2532,6 +2566,8 @@ Class PM_DirectorPsychicHeavyLightning : PM_DirectorPsychicLightning
 
 Class PM_DirectorPsiDischarge : Actor
 {
+	mixin lzdoomCompat;
+	
   int soulhspeed;
   int soulvspeed;
   int soulhdist;
@@ -2653,6 +2689,8 @@ Class PM_DirectorPsiDischarge : Actor
 
 Class PM_DirectorPsiChaser : Actor
 {
+	mixin lzdoomCompat;
+	
   int timer;
   Default
   {
@@ -2743,6 +2781,8 @@ Class PM_DirectorPsiChaser : Actor
 
 Class PM_SmallPsiOrbs : Actor
 {
+	mixin lzdoomCompat;
+	
   int user_phspeed;
   int user_pvspeed;
   int user_phdist;

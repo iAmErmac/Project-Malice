@@ -1,5 +1,7 @@
 Class PM_Exalted : PMPrideMonsterBase
 {
+	mixin lzdoomCompat;
+	
     actor cast;
 	bool spawned;
 	int tplimit;
@@ -494,6 +496,8 @@ Class PM_ExaltedCastReady : Actor
 
 Class PM_ExaltedBeacon : Actor
 {
+	mixin lzdoomCompat;
+	
  Default
  {
  XScale 4;
@@ -603,6 +607,8 @@ Class PM_ExaltedIntroBang : Actor
 
 Class PM_ExaltedMagicShot : Actor
 {
+	mixin lzdoomCompat;
+	
   Default
   {
     Radius 5;
@@ -716,6 +722,8 @@ Class PM_ExaltedSuperSigil : Actor
 
 Class PM_ExaltedSuperSigilRise : Actor
 {
+	mixin lzdoomCompat;
+	
   int rise;
   Default
   {
@@ -761,6 +769,8 @@ Class PM_ExaltedSuperSigilRise : Actor
 
 Class PM_ExaltedSigilRotate : Actor
 {
+	mixin lzdoomCompat;
+	
   int rise;
   Default
   {
@@ -812,6 +822,8 @@ Class PM_ExaltedSigilRotate : Actor
 
 Class PM_ExaltedSuperBall : Actor
 {
+	mixin lzdoomCompat;
+	
   int timer;
   Default
   {
@@ -964,6 +976,8 @@ Class PM_ExaltedCultSummon : Actor
 
 Class PM_ExaltedLaserSigil : PM_ExaltedCultSummon
 {
+	mixin lzdoomCompat;
+	
   Default
   {
   RenderStyle "Add";
@@ -1029,6 +1043,8 @@ Class PM_ExaltedGLSigilSummon : PM_ExaltedCultSummon
 
 Class PM_ExaltedGigalaserSigil : Actor
 {
+	mixin lzdoomCompat;
+	
  int attackloop;
  Default
  {
@@ -1146,6 +1162,8 @@ Class PM_ExaltedGigalaserSigil : Actor
 
 Class PM_ExaltGigalaser : PM_DirectorPlasmaLaser
 {
+	mixin lzdoomCompat;
+	
  Default { +SEEKERMISSILE }
  States
  {
@@ -1166,6 +1184,8 @@ Class PM_ExaltGigalaser : PM_DirectorPlasmaLaser
 
 Class PM_ExaltCultist : Actor
 {
+	mixin lzdoomCompat;
+	
  Default
  {
   Radius 20;

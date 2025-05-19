@@ -319,6 +319,8 @@ Class PM_Hellion : PMUnaffMonsterBase
 
 Class PM_HellionFlare : PMProjectileBase //[NERU] todo: find a fiery whiz sound
 {
+	mixin lzdoomCompat;
+	
   Default
   {
 	Scale 0.90;
@@ -389,6 +391,8 @@ Class PM_HellionFlareSlow : PM_HellionFlare
 
 Class PM_HellionHoming : CacodemonBall
 {
+	mixin lzdoomCompat;
+	
   int timer;
   Default
   {
@@ -492,6 +496,8 @@ Class PM_HellionHoming : CacodemonBall
 
 Class PM_HellionGeyser : Actor
 {
+	mixin lzdoomCompat;
+	
  int loop;
  int attackloop;
  Default
@@ -679,6 +685,8 @@ Class PM_HellionMendingBuff : Powerup
 
 Class PM_HellionMendingOrb : Actor
 {
+	mixin lzdoomCompat;
+	
  int timer;
  Default
  {
@@ -788,6 +796,8 @@ Class PM_HellionMendingOrb : Actor
 
 Class PM_HellionMendingOrb2 : Actor
 {
+	mixin lzdoomCompat;
+	
  Default
  {
   Projectile;

@@ -1,5 +1,7 @@
 Class PM_FOCRifle : PMVoidMonsterBase
 { 
+	mixin lzdoomCompat;
+	
     int cainphase;
 	Default
 	{
@@ -266,6 +268,8 @@ Class PM_FOCRifle : PMVoidMonsterBase
 
 Class PM_FOCTracer : PM_BulletTracer
 {
+	mixin lzdoomCompat;
+	
  Default
  {
  RenderStyle "Normal";

@@ -1,5 +1,7 @@
 Class PM_Fusionite : PMUnaffMonsterBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		PMMonsterBase.CodexLore 
@@ -242,6 +244,8 @@ Class PM_Fusionite : PMUnaffMonsterBase
 
 Class PM_FusionShot : PMProjectileBase
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 6;
@@ -286,6 +290,8 @@ Class PM_FusionShot : PMProjectileBase
 
 Class PM_ScatterFusionShot : PM_FusionShot
 {
+	mixin lzdoomCompat;
+	
 	Default
 	{
 		Radius 8;
