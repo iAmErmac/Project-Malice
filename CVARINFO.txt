@@ -1,3 +1,7 @@
+//textured particle system
+Server bool pm_particlefx = true;
+Server Int pm_maxparticles = 200;
+
 //Monster Behavior and Spawns
 Server Int pm_forgetcheck = 0;
 Server Float projectmalice_fodderdivider = 0.25;

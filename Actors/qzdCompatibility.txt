@@ -13,7 +13,41 @@ mixin class lzdoomCompat
 	
 	protected void A_SpawnParticleEx (color color1, TextureID texture, int style = STYLE_None, int flags = 0, int lifetime = TICRATE, double size = 1, double angle = 0, double xoff = 0, double yoff = 0, double zoff = 0, double velx = 0, double vely = 0, double velz = 0, double accelx = 0, double accely = 0, double accelz = 0, double startalphaf = 0, double fadestepf = -1, double sizestep = 0, double startroll = 0, double rollvel = 0, double rollacc = 0)
 	{
+		if(!CVar.GetCVar("pm_particlefx").GetBool()) return;
+	
+		if(!texture.IsNull() && texture.IsValid())
+		{
+			emulateTexParticle(texture, style, lifetime, size, angle, xoff, yoff, zoff, velx, vely, velz, accelx, accely, accelz, startalphaf, fadestepf, sizestep, startroll, rollvel, rollacc);
+		}
+		//console.printf("draw particle");
 		return;
+	}
+	
+	protected void emulateTexParticle(TextureID texture, int style = STYLE_None, int lifetime = TICRATE, double size = 1, double angle = 0, double xoff = 0, double yoff = 0, double zoff = 0, double velx = 0, double vely = 0, double velz = 0, double accelx = 0, double accely = 0, double accelz = 0, double startalphaf = 0, double fadestepf = -1, double sizestep = 0, double startroll = 0, double rollvel = 0, double rollacc = 0)
+	{
+		//let mo = Actor.Spawn("particleEmu", pos + (xoff, yoff, zoff));
+		let mo = Actor.Spawn("particleEmu", pos);
+		if(mo)
+		{
+			particleEmu(mo).lifetime = lifetime;
+			particleEmu(mo).texSprite = Texman.GetName(texture);
+			particleEmu(mo).texRenderstyle = style;
+			particleEmu(mo).texAlpha = startalphaf;
+			particleEmu(mo).texScale = size;
+			particleEmu(mo).texVel = (velx, vely, velz);
+			particleEmu(mo).texVelAccelerate = (accelx, accely, accelz);
+			particleEmu(mo).texFade = fadestepf;
+			particleEmu(mo).texSizeStep = sizestep;
+			particleEmu(mo).texRoll = startroll;
+			particleEmu(mo).texRollVel = rollvel;
+			particleEmu(mo).texRollAccelerate = rollacc;
+			particleEmu(mo).setupParticle = true;
+			mo.A_SetAngle(angle);
+			
+			let pmo = players[consoleplayer].mo;
+			let pM = pmo.findinventory("texParticleManager");
+			if(pM) texParticleManager(pM).addParticle(mo);
+		}
 	}
 	
 	protected double GetPitchTo(Actor source, Actor target, double zOfs = 0, double targZOfs = 0, bool absolute = false)
@@ -33,5 +67,142 @@ mixin class lzdoomCompat
 	protected double MsTimeF()
 	{
 		return Level.Time * 35 * 1000;
+	}
+}
+
+class particleEmu : Actor
+{
+	transient int lifetime;
+	transient name texSprite;
+	transient bool setupParticle;
+	transient int texRenderstyle;
+	transient double texAlpha;
+	transient double texScale;
+	transient vector3 texVel;
+	transient vector3 texVelAccelerate;
+	transient double texFade;
+	transient double texSizeStep;
+	transient double texRoll;
+	transient double texRollVel;
+	transient double texRollAccelerate;
+
+	Default
+	{
+	height 1;
+	radius 1;
+	+NOINTERACTION;
+	+ROLLSPRITE;
+	}
+	
+	override void BeginPlay()
+	{
+		lifetime = 35;
+		Super.BeginPlay();
+	}
+	
+	override void Tick()
+	{
+		if(setupParticle)
+		{
+			sprite = GetSpriteIndex(texSprite);
+			if(!texAlpha) texAlpha = 1.0;
+			A_SetRenderstyle(texAlpha, texRenderstyle);
+			if(texScale) A_SetScale(texScale/400);
+			A_ChangeVelocity(texVel.x, texVel.y, texVel.z, CVF_REPLACE);
+			if(texRoll) A_SetRoll(texRoll);
+		}
+		else
+		{
+			A_ChangeVelocity(texVelAccelerate.x, texVelAccelerate.y, texVelAccelerate.z, CVF_RELATIVE);
+			if(texFade > 0) A_FadeOut(texFade);
+			if(texSizeStep > 0) A_SetScale(scale.x * texSizeStep);
+			if(texRollVel > 0) texRollVel += texRollAccelerate;
+			if(texRollVel > 0) A_SetRoll(roll + texRollVel, SPF_INTERPOLATE);
+		}
+		
+		if(lifetime > 0)
+		{
+			lifetime--;
+		}
+		else
+		{
+			let pmo = players[consoleplayer].mo;
+			let pM = pmo.findinventory("texParticleManager");
+			if(pM) texParticleManager(pM).clearParticle(self);
+			destroy();
+		}
+	}
+	
+	states
+	{
+	Spawn:
+		TNT1 A 1;
+		wait;
+	}
+}
+
+class texParticleManager : Inventory
+{
+	array<Actor> particleStack;
+
+	Default
+	{
+		Inventory.MaxAmount 1;
+		+INVENTORY.UNDROPPABLE;
+		+INVENTORY.UNTOSSABLE;
+		+INVENTORY.AUTOACTIVATE;
+		+INVENTORY.UNCLEARABLE;
+		+INVENTORY.PERSISTENTPOWER;
+	}
+	
+	override void DoEffect()
+	{
+		/*int particleCount;
+		ThinkerIterator pe = ThinkerIterator.Create("particleEmu");
+		Actor mo;
+		while (mo = particleEmu(pe.Next()))
+		{
+			particleCount++;
+		}
+		console.printf("particle count: "..particleCount);*/
+		
+		int maxParticles = CVar.GetCvar("pm_maxparticles").GetInt();
+		while(particleStack.size() > maxParticles)
+		{
+			removeParticle(0);
+		}
+
+		Super.DoEffect();
+	}
+	
+	void addParticle(Actor texParticle)
+	{
+		particleStack.push(texParticle);
+	}
+	
+	void removeParticle(int index = 0)
+	{
+		let texParticle = particleStack[index];
+		if(texParticle) texParticle.destroy();
+		particleStack.Delete(index);
+	}
+	
+	void clearParticle(Actor texParticle)
+	{
+		int pI = particleStack.find(texParticle);
+		if(pI) removeParticle(pI);
+	}
+}
+
+class texParticleHandler : EventHandler
+{
+	override void WorldTick()
+	{
+		if(level.mapname == "TITLEMAP") return;
+		
+		playerinfo player = players[consoleplayer];
+		if(!player) return;
+		
+		if(!player.mo.countinv("texParticleManager")) player.mo.giveinventory("texParticleManager", 1);
 	}
 }

@@ -1,0 +1,134 @@
+[enu default]
+
+PM_OPTIONS 			= "Project Malice";
+PM_OPTIONS_TITLE 		= "Project Malice Options";
+PM_SINCODEX 			= "Sin Codex";
+PM_PARTICLE_FX_TITLE 		= "Particle Effects";
+PM_PARTICLE_FX_NOTE 		= "Particle effects used from muzzle flash to trailing fx etc.";
+PM_PARTICLE_FX_OPT 		= "Particle Effects";
+PM_PARTICLE_COUNT_NOTE 		= "How many custom particles can exist at a time";
+PM_PARTICLE_COUNT_OPT 		= "Particle Limit";
+PM_STEALTH_TITLE 		= "Stealth Detection";
+PM_STEALTH_NOTE1 		= "Detection Only: Enemies never forget where you were";
+PM_STEALTH_NOTE2 		= "Full: Enemies barely see you if you stick to shadows";
+PM_STEALTH_NOTE3 		= "Eventually They forget you if keep hiding, crouching helps";
+PM_STEALTH_OPT 			= "Stealth Mechanics";
+PM_FODDER_TITLE 		= "Fodder Enemies";
+PM_FODDER_NOTE 			= "Fodder count is level monster count multiplied by factor below";
+PM_FODDER_OPT 			= "Fodder Multiplier";
+PM_HEALTH_TITLE1 		= "Health Multiplier";
+PM_HEALTH_NOTE1 		= "Change health multipliers of every enemy. Save the hassle";
+PM_HEALTH_OPT 			= "Health Multiplier";
+PM_HEALTH_TITLE2 		= "Specific Health Multipliers";
+PM_HEALTH_NOTE2 		= "Change health multipliers of tier-specific demons";
+PM_HEALTH_FODDER 		= "Fodder";
+PM_HEALTH_UNAFFILIATED 		= "Unaffiliated";
+PM_HEALTH_LUST 			= "Lust";
+PM_HEALTH_GLUTTONY 		= "Gluttony";
+PM_HEALTH_GREED 		= "Greed (WIP)";
+PM_HEALTH_WRATH 		= "Wrath";
+PM_HEALTH_SLOTH 		= "Sloth (WIP)";
+PM_HEALTH_ENVY 			= "Envy";
+PM_HEALTH_PRIDE 		= "Pride";
+PM_HEALTH_PESTILENCE 		= "Pestilence";
+PM_HEALTH_FAMINE 		= "Famine";
+PM_HEALTH_WAR 			= "War";
+PM_HEALTH_DEATH 		= "Death";
+PM_HEALTH_UMBRAL 		= "Umbral";
+PM_HEALTH_VOID 			= "Void";
+
+PM_STEALTH_OPT1 		= "Disabled";
+PM_STEALTH_OPT2 		= "Detection Only";
+PM_STEALTH_OPT3 		= "Full";
+
+PM_SINCODEX_TITLE 		= "Sin Codex";
+PM_SINCODEX_NOTE1 		= "This menu lists down all tiers and its enemies in Project Malice that";
+PM_SINCODEX_NOTE2 		= "you will encounter. Keep in mind all of these tiers are unfinished";
+PM_SINCODEX_NOTE3 		= "as of right now, and details may change as the mod progresses";
+PM_SINCODEX_FODDER 		= "Fodder";
+PM_SINCODEX_UNAFFILIATED 	= "Unaffiliated";
+PM_SINCODEX_LUST 		= "Lust";
+PM_SINCODEX_GLUTTONY 		= "Gluttony";
+PM_SINCODEX_GREED 		= "Greed (WIP)";
+PM_SINCODEX_WRATH 		= "Wrath";
+PM_SINCODEX_SLOTH 		= "Sloth";
+PM_SINCODEX_ENVY 		= "Envy";
+PM_SINCODEX_PRIDE 		= "Pride";
+PM_SINCODEX_PESTILENCE 		= "Pestilence";
+PM_SINCODEX_FAMINE 		= "Famine";
+PM_SINCODEX_WAR 		= "War";
+PM_SINCODEX_DEATH 		= "Death";
+PM_SINCODEX_UMBRAL 		= "Umbral";
+PM_SINCODEX_VOID 		= "Void";
+
+PM_SINCODEX_FODDER_TITLE 	= "FODDER";
+PM_SINCODEX_FODDER_NOTE1 	= "Extremely common and usually lacks ranged attacks.";
+PM_SINCODEX_FODDER_NOTE2 	= "They usually spawn around already placed enemies";
+PM_SINCODEX_FODDER_NOTE3 	= "within the map. Typically very weak, but may";
+PM_SINCODEX_FODDER_NOTE4 	= "obstruct movement simply by being in the way.";
+
+PM_SINCODEX_UNAFFILIATED_TITLE 	= "UNAFFILIATED";
+PM_SINCODEX_UNAFFILIATED_NOTE1 	= "Common and is faithful to their vanilla counterparts. Some";
+PM_SINCODEX_UNAFFILIATED_NOTE2 	= "extra types are added as a step above them, however.";
+
+PM_SINCODEX_LUST_TITLE 		= "LUST";
+PM_SINCODEX_LUST_NOTE1 		= "Enemies of this tier sometimes fly, are fast, And love";
+PM_SINCODEX_LUST_NOTE2 		= "phasing attacks. Has lower health to compensate for speed.";
+
+PM_SINCODEX_GLUTTONY_TITLE 	= "GLUTTONY";
+PM_SINCODEX_GLUTTONY_NOTE1 	= "Enemies of this tier use gore and/or bile to";
+PM_SINCODEX_GLUTTONY_NOTE2 	= "attack. Some enemies of this type are tanky.";
+
+PM_SINCODEX_GREED_TITLE 	= "GREED";
+PM_SINCODEX_GREED_NOTE1 	= "(Work in progress)";
+
+PM_SINCODEX_WRATH_TITLE 	= "WRATH";
+PM_SINCODEX_WRATH_NOTE1 	= "Demons of this type are aggressive, and will close the";
+PM_SINCODEX_WRATH_NOTE2 	= "gap between you very quickly for melee attacks. Can turn";
+PM_SINCODEX_WRATH_NOTE3 	= "enraged if constantly hurt or left alone for too long.";
+
+PM_SINCODEX_SLOTH_TITLE 	= "SLOTH";
+PM_SINCODEX_SLOTH_NOTE1 	= "Hosts eternally consumed by sorrow, despair, and nihilism. The death of";
+PM_SINCODEX_SLOTH_NOTE2 	= "hope.Demons of this tier are like snails, but very tanky. Cosmic-themed";
+PM_SINCODEX_SLOTH_NOTE3 	= "attacks, slowing tar, chains and barbed wire are a common sight.";
+
+PM_SINCODEX_ENVY_TITLE 		= "ENVY";
+PM_SINCODEX_ENVY_NOTE1 		= "Second most powerful sin. Has the ability to inherit";
+PM_SINCODEX_ENVY_NOTE2 		= "one of each sin's attacks. Most demons of this";
+PM_SINCODEX_ENVY_NOTE3 		= "sin like to keep its distance from the player.";
+
+PM_SINCODEX_PRIDE_TITLE 	= "PRIDE";
+PM_SINCODEX_PRIDE_NOTE1 	= "The most powerful sin. Attacks are fierce and intimidating.";
+PM_SINCODEX_PRIDE_NOTE2 	= "Lots of magic focused abilities and attacks.";
+
+PM_SINCODEX_PESTILENCE_TITLE 	= "PESTILENCE";
+PM_SINCODEX_PESTILENCE_NOTE1 	= "The first apocalypse. Nasty, pests and infection";
+PM_SINCODEX_PESTILENCE_NOTE2 	= "run wild in these demons. Dying enemies";
+PM_SINCODEX_PESTILENCE_NOTE3 	= "may leave behind 'parting gifts'.";
+
+PM_SINCODEX_FAMINE_TITLE 	= "FAMINE";
+PM_SINCODEX_FAMINE_NOTE1 	= "The second apocalypse. Crazed, ravenous demons that suffer from";
+PM_SINCODEX_FAMINE_NOTE2 	= "eternal starvation. They are VERY aggressive, agile, and rely on";
+PM_SINCODEX_FAMINE_NOTE3 	= "swift melee attacks. However, they are very quick on turning on";
+PM_SINCODEX_FAMINE_NOTE4 	= "each other. Letting them infight isn't recommended. They get";
+PM_SINCODEX_FAMINE_NOTE5 	= "exponentially more tankier within eating carcasses.";
+
+PM_SINCODEX_WAR_TITLE 		= "WAR";
+PM_SINCODEX_WAR_NOTE1 		= "The third apocalypse. All burns in war.";
+PM_SINCODEX_WAR_NOTE2		= "Attacks with bullets, plasma, fire and poison.";
+PM_SINCODEX_WAR_NOTE3 		= "The most heavily equipped of the apocalypses.";
+
+PM_SINCODEX_DEATH_TITLE 	= "DEATH";
+PM_SINCODEX_DEATH_NOTE1 	= "The final apocalypse. The eternal resting place of";
+PM_SINCODEX_DEATH_NOTE2 	= "man. Primarily attacks with souls. Every demon";
+PM_SINCODEX_DEATH_NOTE3 	= "uses varying degrees of phasing abilities.";
+
+PM_SINCODEX_UMBRAL_TITLE 	= "UMBRAL";
+PM_SINCODEX_UMBRAL_NOTE1 	= "The deep dwellers that lay restless within Hell. Lightning";
+PM_SINCODEX_UMBRAL_NOTE2 	= "and ice is a prominent method of attack, but some demons";
+PM_SINCODEX_UMBRAL_NOTE3 	= "can deviate. The second toughest tier in general.";
+
+PM_SINCODEX_VOID_TITLE 		= "VOID";
+PM_SINCODEX_VOID_NOTE1 		= "The eternal darkness that rests beyond the inferno.";
+PM_SINCODEX_VOID_NOTE2 		= "Defies our plane of existence, and uses it to their";
+PM_SINCODEX_VOID_NOTE3 		= "advantage to haunt. Very rare, and very dangerous.";
