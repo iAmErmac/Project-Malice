@@ -228,7 +228,7 @@ class PMMonsterBase : Actor abstract
 		{
 			double cp = cos(p + frandom(-15, 15));
 			double sp = -sin(p + frandom(-15, 15));
-			//caller.A_SpawnParticleEx(col, tex, STYLE_Add, SPF_RELPOS | SPF_RELVEL | SPF_RELACCEL | SPF_FULLBRIGHT | SPF_NOTIMEFREEZE, 30, frandom(4, 8), caller.Angle + frandom(-180, 180), offset.X + dist * cp, offset.Y, offset.Z + dist * sp, 0, 0, 0, -0.10 * cp, 0, -0.10 * sp);
+			//caller.PM_SpawnParticleEx(col, tex, STYLE_Add, SPF_RELPOS | SPF_RELVEL | SPF_RELACCEL | SPF_FULLBRIGHT | SPF_NOTIMEFREEZE, 30, frandom(4, 8), caller.Angle + frandom(-180, 180), offset.X + dist * cp, offset.Y, offset.Z + dist * sp, 0, 0, 0, -0.10 * cp, 0, -0.10 * sp);
 		}
 	}
 
@@ -429,7 +429,7 @@ class PM_BeamSegment : Actor abstract
 	{
 		for (int i = 0; i < 1; ++i)
 		{
-			A_SpawnParticleEx(fillcolor, Tex, STYLE_Add, SPF_RELATIVE | SPF_FULLBRIGHT | SPF_NOTIMEFREEZE, random(100, 200), frandom(1.5, 3.0), 0,random(-10, 10), 0, 0,
+			PM_SpawnParticleEx(fillcolor, Tex, STYLE_Add, SPF_RELATIVE | SPF_FULLBRIGHT | SPF_NOTIMEFREEZE, random(100, 200), frandom(1.5, 3.0), 0,random(-10, 10), 0, 0,
 				frandom(-0.10, 0.10), frandom(-0.10, 0.10), frandom(-0.10, 0.10),
 				frandom(-0.005, 0.005), frandom(-0.005, 0.005), frandom(-0.005, 0.005));
 		}

@@ -43,7 +43,7 @@ Class PM_Vore : PMEnvyMonsterBase
   
   void PM_EnvyRuneGlow()
   {
-	A_SpawnParticleEx("47ae1a",TexMan.CheckForTexture("DTPRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(2,10),size: frandom(80,300),xoff: 5,zoff: 40,startalphaf: 0.5
+	PM_SpawnParticleEx("47ae1a",TexMan.CheckForTexture("DTPRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(2,10),size: frandom(80,300),xoff: 5,zoff: 40,startalphaf: 0.5
 	,fadestepf: -1,startroll: random(-180,180));
   }
   
@@ -130,7 +130,7 @@ Class PM_Vore : PMEnvyMonsterBase
 			
 			bSHOOTABLE = false;
 			
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 			(
 				"",
 				TexMan.CheckForTexture("DTPRA0"),
@@ -149,7 +149,7 @@ Class PM_Vore : PMEnvyMonsterBase
 				
 			for (int i = random(7, 15); i > 0; i--)
 			{		
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(   
 					 "",
 					 TexMan.CheckForTexture("SPKOG0"),
@@ -184,7 +184,7 @@ Class PM_Vore : PMEnvyMonsterBase
 				
 			for (int i = random(7, 15); i > 0; i--)
 			{		
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(   
 					 "",
 					 TexMan.CheckForTexture("SPKOG0"),
@@ -215,7 +215,7 @@ Class PM_Vore : PMEnvyMonsterBase
 			
 			bSHOOTABLE = false;
 			
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 			(
 				"",
 				TexMan.CheckForTexture("DTPRA0"),
@@ -234,7 +234,7 @@ Class PM_Vore : PMEnvyMonsterBase
 				
 			for (int i = random(7, 15); i > 0; i--)
 			{		
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(   
 					 "",
 					 TexMan.CheckForTexture("SPKOG0"),
@@ -269,7 +269,7 @@ Class PM_Vore : PMEnvyMonsterBase
 				
 			for (int i = random(7, 15); i > 0; i--)
 			{		
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(   
 					 "",
 					 TexMan.CheckForTexture("SPKOG0"),
@@ -454,20 +454,20 @@ Class PM_Vore : PMEnvyMonsterBase
 	}
 	VORE HHHHHHHHHIIIIIIII 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("NO1SE1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("NO1SE1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
 	  ,fadestepf: 0.1,startroll: 180);
 	  A_FaceTarget();
 	}
 	VORE IIII 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("NO1SF1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("NO1SF1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
 	  ,fadestepf: 0.1,startroll: 180);
 	  A_FaceTarget();
 	}
 	TNT1 A 0 A_SpawnProjectile("PM_NobleBomb",40,0,0,CMF_OFFSETPITCH,-7);
 	VORE JJJJJ 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("NO1SG1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("NO1SG1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
 	  ,fadestepf: 0.1,startroll: 180);
 	  A_FaceTarget();
 	}
@@ -489,20 +489,20 @@ Class PM_Vore : PMEnvyMonsterBase
 	}
 	VORE HHHHHHHHHHHHHHHHHHIIIIIIIIIIIII 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("WHIPE1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("WHIPE1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
 	  ,fadestepf: 0.1,startroll: 180);
 	  A_FaceTarget();
 	}
 	VORE IIII 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("WHIPF1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("WHIPF1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
 	  ,fadestepf: 0.1,startroll: 180);
 	  A_FaceTarget();
 	}
 	TNT1 A 0 A_SpawnProjectile("PM_CopyWhiplashGroundSeeker");
 	VORE JJJJJ 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("WHIPG1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33",TexMan.CheckForTexture("WHIPG1"),style: STYLE_ADD,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 30,size: 110,xoff: 20,zoff: 60,startalphaf: 1
 	  ,fadestepf: 0.1,startroll: 180);
 	  A_FaceTarget();
 	}
@@ -529,14 +529,14 @@ Class PM_Vore : PMEnvyMonsterBase
 	}
 	VORE HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1
 	  , fadestepf: 0.1, startroll: 180);
 	  A_FaceTarget(7,7);
 	}
 	VORE H 0 A_StartSound("Landrazer/Lock");
 	VORE IIIIIIII 1 Bright Light("GreenBall2")
 	{
-	  A_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1
+	  PM_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1
 	  , fadestepf: 0.1, startroll: 180);
 	  A_FaceTarget(7,7);
 	}
@@ -547,16 +547,16 @@ Class PM_Vore : PMEnvyMonsterBase
 	{
 	 A_StartSound("Draugr/Fire",23,CHANF_OVERLAP);
 	 A_SpawnProjectile("PM_CopyLandrazerComet",38,15,frandom(-3.5,3.5),CMF_AIMDIRECTION,pitch+frandom(-1.5,1.5));
-	 A_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1,
+	 PM_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1,
 	 fadestepf: 0.1, startroll: 180);
 	}
-	VORE JJJJJJ 1 Light("Greenball2") A_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1
+	VORE JJJJJJ 1 Light("Greenball2") PM_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1
 	, fadestepf: 0.1, startroll: 180);
 	VORE J 0 A_StartSound("Sybarite/SlotIn",24);
-	VORE JJJ 1 Light("Greenball2") A_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1, fadestepf: 0.1, startroll: 180);
+	VORE JJJ 1 Light("Greenball2") PM_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1, fadestepf: 0.1, startroll: 180);
 	VORE JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ 1 
 	{
-	  A_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1, fadestepf: 0.1, startroll: 180);
+	  PM_SpawnParticleEx("4EFF33", TexMan.CheckForTexture("LRA_E1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 30, size: 110, xoff: 20, zoff: 60, startalphaf: 1, fadestepf: 0.1, startroll: 180);
 	  A_FaceTarget(6,6);
 	}
 	Loop;
@@ -774,8 +774,8 @@ Class PM_VoreDagger : Actor
 	 //A_SeekerMissile(random(0,1),random(0,1));
 	 //A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,8,0,random(20,-20),random(-5,5),random(-5,5),10,0,0,0,0,0,1,-1,-0.3);
 	 //A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,8,0,random(20,-20),random(-5,5),random(-5,5),10,0,0,0,0,0,1,-1,-0.3);
-	 A_SpawnParticleEx("00ff00",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 80,size: 25.0,xoff:frandom(-3,-10), velx: frandom(0,2), startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
-	 A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(5,35),size: random(1,15),xoff: random(-15,15),yoff: random(-9,9),zoff: random(-7,7),velx: frandom(-0.2,0.2),vely: frandom(-0.5,0.5),velz: frandom(-0.2,-2),startalphaf: frandom(0.65,0.95),startroll: random(-180,180));
+	 PM_SpawnParticleEx("00ff00",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 80,size: 25.0,xoff:frandom(-3,-10), velx: frandom(0,2), startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
+	 PM_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(5,35),size: random(1,15),xoff: random(-15,15),yoff: random(-9,9),zoff: random(-7,7),velx: frandom(-0.2,0.2),vely: frandom(-0.5,0.5),velz: frandom(-0.2,-2),startalphaf: frandom(0.65,0.95),startroll: random(-180,180));
 	}
     Loop;
   Death:
@@ -783,11 +783,11 @@ Class PM_VoreDagger : Actor
 	{
 	A_SetScale(1.1);
 	for(int i=random(7,10);i>0;i--)
-	 { A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(20,30),size: random(1,20),velx: random(-4,4),vely: random(-4,4),velz: random(-4,4),startalphaf: 0.9,startroll: random(-180,180)); }
+	 { PM_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(20,30),size: random(1,20),velx: random(-4,4),vely: random(-4,4),velz: random(-4,4),startalphaf: 0.9,startroll: random(-180,180)); }
 	for(int i=5;i>0;i--)
-	 { A_SpawnParticleEx("80FF38",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(20,45),size: random(34,46),xoff: -10,startalphaf: 0.75,fadestepf: -1,sizestep: -0.25,startroll: random(-180,180)); }
+	 { PM_SpawnParticleEx("80FF38",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(20,45),size: random(34,46),xoff: -10,startalphaf: 0.75,fadestepf: -1,sizestep: -0.25,startroll: random(-180,180)); }
 	for(int i=2;i>0;i--)
-	 { A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(5,10),size: 130.0,startalphaf: 0.8,sizestep: 0.75); }
+	 { PM_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(5,10),size: 130.0,startalphaf: 0.8,sizestep: 0.75); }
 	}
     SBAL DEFGH 4 BRIGHT A_FadeOut(0.5);
     Stop;
@@ -820,9 +820,9 @@ Class PM_VoreSmallDagger : PM_VoreDagger
 
     void PM_VoreOrbParticles()
 	{
-	  A_SpawnParticleEx("00ff00",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 50,size: 15.0,xoff: frandom(-2,-10), velx: frandom(0,2), startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
-	  //A_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,5),size: 15.0,xoff: 30,startalphaf: frandom(0.15,0.45),startroll: random(-180,180));
-	  A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,80),size: random(1,8),xoff: random(-3,3),yoff: random(-2,2),zoff: random(-2,2),velx: frandom(-0.1,0.1),vely: frandom(-0.1,0.1),velz: frandom(-0.1,0.1),startalphaf: frandom(0.65,0.95),startroll: random(-180,180));
+	  PM_SpawnParticleEx("00ff00",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 50,size: 15.0,xoff: frandom(-2,-10), velx: frandom(0,2), startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
+	  //PM_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,5),size: 15.0,xoff: 30,startalphaf: frandom(0.15,0.45),startroll: random(-180,180));
+	  PM_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,80),size: random(1,8),xoff: random(-3,3),yoff: random(-2,2),zoff: random(-2,2),velx: frandom(-0.1,0.1),vely: frandom(-0.1,0.1),velz: frandom(-0.1,0.1),startalphaf: frandom(0.65,0.95),startroll: random(-180,180));
 	}
 	
   States
@@ -836,7 +836,7 @@ Class PM_VoreSmallDagger : PM_VoreDagger
     TNT1 A 0 
 	{ 
 	  A_StartSound("Shadow/attack",8,volume:0.65,pitch:frandom(1.10,1.20));
-	  A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(5,10),size: random(5,40),startalphaf: 0.8,sizestep: 0.75,rollvel: random(-10,10));
+	  PM_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(5,10),size: random(5,40),startalphaf: 0.8,sizestep: 0.75,rollvel: random(-10,10));
     }
   Go:
     TRCR AA 1 Bright
@@ -861,7 +861,7 @@ Class PM_VoreSmallDagger : PM_VoreDagger
     SBAL C 5 Bright Light("GreenBall2")
 	{
 	 for(int i=2;i>0;i--)
-	   { A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(5,10),size: 35.0,startalphaf: 0.8,sizestep: 3.75); }
+	   { PM_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(5,10),size: 35.0,startalphaf: 0.8,sizestep: 3.75); }
 	}
     Stop;
   }
@@ -909,7 +909,7 @@ Class PM_VoreOrbSummon : Actor
     A_StartSound("Vore/Throw");
 	A_SpawnProjectile("PM_VoreDagger",0,0,0,CMF_AIMDIRECTION|CMF_TRACKOWNER);
 	for(int i=2;i>0;i--)
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	(
 	"",
 	TexMan.CheckForTexture("SPKOG0"),
@@ -1002,15 +1002,15 @@ Class PM_CopyLandrazerComet : PM_LandrazerComet
     TNT1 A 0;
 	TNT1 A 0 
 	{
-		A_SpawnParticleEx("", TexMan.CheckForTexture("SPKOG0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT,lifetime: random(2,10), size: frandom(100,170), startalphaf: 1.0, fadestepf: 0, sizestep: frandom(0.0,3),startroll: random(-180,180));
-		A_SpawnParticleEx("", TexMan.CheckForTexture("DTPRA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,15), size: frandom(90,290), startalphaf: 1.0, fadestepf: 0, sizestep: frandom(0.0,3), startroll: random(-180,180) );
+		PM_SpawnParticleEx("", TexMan.CheckForTexture("SPKOG0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT,lifetime: random(2,10), size: frandom(100,170), startalphaf: 1.0, fadestepf: 0, sizestep: frandom(0.0,3),startroll: random(-180,180));
+		PM_SpawnParticleEx("", TexMan.CheckForTexture("DTPRA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,15), size: frandom(90,290), startalphaf: 1.0, fadestepf: 0, sizestep: frandom(0.0,3), startroll: random(-180,180) );
 	}
    Go:
     HUBL AAAABBBBCCCCDDDD 1 Light("GreenBall2")
 	{
 	  A_SetRoll(roll+15);
-	  A_SpawnParticleEx("",  TexMan.CheckForTexture("FRPGC0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,35),  size: frandom(45,85),  xoff: -10,  startalphaf: 1.0, fadestepf: -1,  sizestep: frandom(0.0,-0.50), startroll: random(-180,180),rollvel: random(-5,5));
-	  A_SpawnParticleEx("", TexMan.CheckForTexture("SPKOG0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(35,100), size: frandom(5,20), xoff: frandom(-30,30), yoff: frandom(-30,30), zoff: frandom(-20,20), velx: frandom(-0.3,0.3), vely: frandom(-0.3,0.3), velz: frandom(-0.1,0.1), startalphaf: frandom(0.35,1), fadestepf: -1, startroll: random(-180,180));
+	  PM_SpawnParticleEx("",  TexMan.CheckForTexture("FRPGC0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,35),  size: frandom(45,85),  xoff: -10,  startalphaf: 1.0, fadestepf: -1,  sizestep: frandom(0.0,-0.50), startroll: random(-180,180),rollvel: random(-5,5));
+	  PM_SpawnParticleEx("", TexMan.CheckForTexture("SPKOG0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(35,100), size: frandom(5,20), xoff: frandom(-30,30), yoff: frandom(-30,30), zoff: frandom(-20,20), velx: frandom(-0.3,0.3), vely: frandom(-0.3,0.3), velz: frandom(-0.1,0.1), startalphaf: frandom(0.35,1), fadestepf: -1, startroll: random(-180,180));
 	}
 	Loop;
    Death:

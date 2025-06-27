@@ -87,6 +87,7 @@ Corruption Cards / CutmanMike - Code for checking corpses, used for Famine enemi
 Desfar - Lich sprites
 Antinous - Master switch spawn code
 High Councilor - Sprites for the Spawn of Belphegor
+Ermac - LZDoom 3.88 and QuestZDoom compatibility
 
 MY APOLOGIES IF I MISSED ANYONE!
 

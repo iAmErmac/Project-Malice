@@ -395,7 +395,7 @@ Class PM_CivZombieMolotov : PM_ZTrooperFragGrenade
   Spawn2:
 	PI_B A 2 Light("AvatarFireball2")
     {
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	(
 	"",
 	TexMan.CheckForTexture("F1R1A0"),
@@ -403,7 +403,7 @@ Class PM_CivZombieMolotov : PM_ZTrooperFragGrenade
 	lifetime: random(5,20), size: 30.0, xoff: -10, vely:frandom(-0.5,0.5), velz:frandom(0.5,1.5), startalphaf: 0.8, fadestepf: -1,
 	sizestep: -0.28, startroll: random(-180,180), rollvel: random(-10,10) );
     A_SetRoll(roll+15);
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	(
 	"",
 	TexMan.CheckForTexture("SPKOA0"),

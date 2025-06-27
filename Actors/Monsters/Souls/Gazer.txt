@@ -72,7 +72,7 @@ Class PM_Gazer : PMPrideMonsterBase
   
   void PM_GazerGlow()
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -140,7 +140,7 @@ Class PM_Gazer : PMPrideMonsterBase
 	PRID A 0 A_StartSound("GenericChargeSmall",50);
 	PRID AAAAAAAAAAAAAAAAAAAAAAAA 1
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -174,7 +174,7 @@ Class PM_Gazer : PMPrideMonsterBase
 	PRID AAAAAAAAAAAAAAAAAAAAAAA 1
 	{
 		A_FaceTarget();
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -196,7 +196,7 @@ Class PM_Gazer : PMPrideMonsterBase
 	{
 	A_FaceTarget();
 	A_StartSound("PM/RuneFill",21);
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -223,7 +223,7 @@ Class PM_Gazer : PMPrideMonsterBase
 	{
 	A_FaceTarget();
 	A_StartSound("PM/RuneFill",21);
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -250,7 +250,7 @@ Class PM_Gazer : PMPrideMonsterBase
 	{
 	A_FaceTarget();
 	A_StartSound("PM/RuneFill",21);
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -316,7 +316,7 @@ Class PM_Gazer : PMPrideMonsterBase
 	PRID AAAAAAAAAAAAAAAAAAAAAAAA 1
 	{
 		A_Recoil(-0.5);
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "aa0000",
 		 TexMan.CheckForTexture("GNSMK0"),
@@ -335,7 +335,7 @@ Class PM_Gazer : PMPrideMonsterBase
 		 sizestep: 2,
 		 startroll: random(-180,180)
 	    );
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -365,7 +365,7 @@ Class PM_Gazer : PMPrideMonsterBase
 	}
 	PRID AAAAAAAAAAAAAAAAAAAAAA 1
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "aa0000",
 		 TexMan.CheckForTexture("GNSMK0"),
@@ -422,7 +422,7 @@ Class PM_Gazer : PMPrideMonsterBase
 		
 		angle = frandom(0, 360);
 		
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "aa0000",
 		 TexMan.CheckForTexture("GNSMK0"),
@@ -517,7 +517,7 @@ Class PM_GazerBall : Actor
 	  TNT1 A 0;
 	  TNT1 AA 0
 	  {
-	  A_SpawnParticleEx
+	  PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -541,7 +541,7 @@ Class PM_GazerBall : Actor
    Death:
 		TNT1 AA 0
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRR0"),
@@ -561,7 +561,7 @@ Class PM_GazerBall : Actor
 		}
 		TNT1 AAAAA 0
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (
 		"",
 		TexMan.CheckForTexture("RLSSA0"),

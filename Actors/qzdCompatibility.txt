@@ -11,7 +11,7 @@ mixin class lzdoomCompat
 		QF_3D =	1 << 6
 	}
 	
-	protected void A_SpawnParticleEx (color color1, TextureID texture, int style = STYLE_None, int flags = 0, int lifetime = TICRATE, double size = 1, double angle = 0, double xoff = 0, double yoff = 0, double zoff = 0, double velx = 0, double vely = 0, double velz = 0, double accelx = 0, double accely = 0, double accelz = 0, double startalphaf = 0, double fadestepf = -1, double sizestep = 0, double startroll = 0, double rollvel = 0, double rollacc = 0)
+	protected void PM_SpawnParticleEx (color color1, TextureID texture, int style = STYLE_None, int flags = 0, int lifetime = TICRATE, double size = 1, double angle = 0, double xoff = 0, double yoff = 0, double zoff = 0, double velx = 0, double vely = 0, double velz = 0, double accelx = 0, double accely = 0, double accelz = 0, double startalphaf = 0, double fadestepf = -1, double sizestep = 0, double startroll = 0, double rollvel = 0, double rollacc = 0)
 	{
 		if(!CVar.GetCVar("pm_particlefx").GetBool()) return;
 	

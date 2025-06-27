@@ -131,7 +131,7 @@ Class PM_Depraved : PMUmbralMonsterBase
 	INCA LLLLLLLLLLLL 1 
     {
     A_FaceTarget();
-    A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,3),size: random(1,150),xoff:10,yoff:5,zoff:75,velx:random(-1,1),vely:random(-1,1),velz:random(-1,1),startalphaf:0.9,startroll:random(-180,180));
+    PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,3),size: random(1,150),xoff:10,yoff:5,zoff:75,velx:random(-1,1),vely:random(-1,1),velz:random(-1,1),startalphaf:0.9,startroll:random(-180,180));
     }
     INCA U 3 
 	{
@@ -193,8 +193,8 @@ Class PM_Depraved : PMUmbralMonsterBase
 	INCA LLLLLLLLLLLLLLLLLLLLLLLLL 1 Light("ShadowBall4")
 		{
 		A_FaceTarget();
-		A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,3),size: random(1,100),xoff:10,yoff:5,zoff:75,velx:random(-1,1),vely:random(-1,1),velz:random(-1,1),startalphaf:0.9,startroll:random(-180,180));
-		A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,2),size:random(70,150),xoff:10,yoff:6,zoff:68,startalphaf:frandom(0.8,1.0),startroll:random(-180,180));
+		PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,3),size: random(1,100),xoff:10,yoff:5,zoff:75,velx:random(-1,1),vely:random(-1,1),velz:random(-1,1),startalphaf:0.9,startroll:random(-180,180));
+		PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,2),size:random(70,150),xoff:10,yoff:6,zoff:68,startalphaf:frandom(0.8,1.0),startroll:random(-180,180));
 		A_SpawnItemEx("PM_RedFireEffectBig",-3,0,60,0,0,3);
 		}
 	TNT1 A 0 A_StartSound("HPriest/SoulLoop",32,CHANF_LOOPING,0.8,pitch:1.5);
@@ -205,15 +205,15 @@ Class PM_Depraved : PMUmbralMonsterBase
     INCA UUUUUUUU 1 Bright Light("ShadowBall4")
 		{
 		A_FaceTarget(0.1,0.3,0,0);
-		A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,4),size:800,xoff:20,yoff:-6,zoff:64,startalphaf:1.0,sizestep:(-40),startroll:random(-180,180));
+		PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,4),size:800,xoff:20,yoff:-6,zoff:64,startalphaf:1.0,sizestep:(-40),startroll:random(-180,180));
 		A_SpawnItemEx("PM_RedFireEffectBig",4,-5,64,random(0,2),random(-1,1),random(-1,3));
 		}
     INCA UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU 1 Bright Light("ShadowBall4")
 		{
 		A_FaceTarget(0.1,0.3,0,0);
 		if (!random(0, 1)) A_SpawnProjectile("PM_DepravedEyeLaser",25,0,0,CMF_AIMDIRECTION|CMF_OFFSETPITCH,pitch+frandom(-0.1,0.1));
-		A_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(10,30),size:random(3,4),xoff:14,yoff:-6,zoff:64,velx:random(4,10),vely:random(-1,1),velz:random(-1,1),startalphaf:frandom(0.1,0.6),fadestepf:(-1),sizestep:(10),startroll:random(-180,180));
-		A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,4),size:random(40,400),xoff:16,yoff:-6,zoff:64,startalphaf:1.0,startroll:random(-180,180));
+		PM_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(10,30),size:random(3,4),xoff:14,yoff:-6,zoff:64,velx:random(4,10),vely:random(-1,1),velz:random(-1,1),startalphaf:frandom(0.1,0.6),fadestepf:(-1),sizestep:(10),startroll:random(-180,180));
+		PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,4),size:random(40,400),xoff:16,yoff:-6,zoff:64,startalphaf:1.0,startroll:random(-180,180));
         if (!random(0, 4)) A_SpawnProjectile("PM_DepravedBeamWarning",43,0,random(-10,10),CMF_AIMDIRECTION|CMF_OFFSETPITCH,random(1,15));
 		}
 	TNT1 A 0 A_StopSound(1);
@@ -225,8 +225,8 @@ Class PM_Depraved : PMUmbralMonsterBase
 	INCA UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU 1 Bright Light("ShadowBall4")
 		{
 		A_FaceTarget();
-		A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,4),size:random(70,200),xoff:14,yoff:-6,zoff:64,startalphaf:0.8,startroll:random(-180,180));
-		A_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(10,30),size:random(5,10),xoff:14,yoff:-6,zoff:64,velx:random(2,7),vely:random(-3,3),velz:random(-3,3),startalphaf:frandom(0.3,0.9),fadestepf:(-1),sizestep:(10),startroll:random(-180,180));
+		PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,4),size:random(70,200),xoff:14,yoff:-6,zoff:64,startalphaf:0.8,startroll:random(-180,180));
+		PM_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(10,30),size:random(5,10),xoff:14,yoff:-6,zoff:64,velx:random(2,7),vely:random(-3,3),velz:random(-3,3),startalphaf:frandom(0.3,0.9),fadestepf:(-1),sizestep:(10),startroll:random(-180,180));
 		}
     Goto See;
   OBSOLETE-LaserFire:
@@ -448,13 +448,13 @@ Class PM_Depraved : PMUmbralMonsterBase
     INCX A 10 Bright
 	{
 	A_SpawnProjectile("PM_DepravedBeamWarning",43,0,random(-180,180),CMF_AIMDIRECTION|CMF_OFFSETPITCH,random(1,60));
-	A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(3,4),size:400,xoff:6,yoff:0,zoff:40,startalphaf:1.0,startroll:random(-180,180));
-	A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(3,4),size:400,xoff:6,yoff:0,zoff:40,startalphaf:1.0,startroll:random(-180,180));
-	A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(3,4),size:400,xoff:6,yoff:0,zoff:40,startalphaf:1.0,startroll:random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(3,4),size:400,xoff:6,yoff:0,zoff:40,startalphaf:1.0,startroll:random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(3,4),size:400,xoff:6,yoff:0,zoff:40,startalphaf:1.0,startroll:random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(3,4),size:400,xoff:6,yoff:0,zoff:40,startalphaf:1.0,startroll:random(-180,180));
 	A_SpawnItemEx("PM_BlackMeatChunkLauncher",random(-2,2),random(-2,2),random(20,40),0,0,0,0,SXF_NOCHECKPOSITION);
 	A_SpawnItemEx("PM_BlackMeatChunkLauncher",random(-2,2),random(-2,2),random(20,40),0,0,0,0,SXF_NOCHECKPOSITION);
 	A_SpawnItemEx("PM_BlackMeatChunkLauncher",random(-2,2),random(-2,2),random(20,40),0,0,0,0,SXF_NOCHECKPOSITION);
-	A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(100,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,50),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(100,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,50),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
 	A_StartSound("monster/hadexp");
 	}
 	TNT1 A 0 A_StartSound("EntAva/Soul",26);
@@ -462,9 +462,9 @@ Class PM_Depraved : PMUmbralMonsterBase
 	TNT1 A 0 A_StartSound("DorReaver/Arbalest",27);
     INCX BC 5 Bright
 	{
-	A_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,60),size:random(5,10),xoff:0,yoff:random(-10,10),zoff:random(0,40),velx:random(3,3),vely:random(-3,3),velz:random(-3,3),startalphaf:frandom(0.8,1.0),fadestepf:(-1),sizestep:random(2,15),startroll:random(-180,180));
+	PM_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,60),size:random(5,10),xoff:0,yoff:random(-10,10),zoff:random(0,40),velx:random(3,3),vely:random(-3,3),velz:random(-3,3),startalphaf:frandom(0.8,1.0),fadestepf:(-1),sizestep:random(2,15),startroll:random(-180,180));
 	A_SpawnProjectile("PM_DepravedBeamWarning",43,0,random(-180,180),CMF_AIMDIRECTION|CMF_OFFSETPITCH,random(1,60));
-	A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(4,8),size:random(200,400),xoff:6,yoff:0,zoff:random(30,45),startalphaf:1.0,startroll:random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(4,8),size:random(200,400),xoff:6,yoff:0,zoff:random(30,45),startalphaf:1.0,startroll:random(-180,180));
 	A_SpawnItemEx("PM_BlackMeatChunkLauncher",random(-2,2),random(-2,2),random(20,40),0,0,0,0,SXF_NOCHECKPOSITION);
 	A_SpawnItemEx("PM_BlackMeatChunkLauncher",random(-2,2),random(-2,2),random(20,40),0,0,0,0,SXF_NOCHECKPOSITION);
 	}
@@ -472,11 +472,11 @@ Class PM_Depraved : PMUmbralMonsterBase
     INCX D 5 Bright A_NoBlocking;
     INCX EFGHIJ 5 Bright
 	{
-	A_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,60),size:random(5,10),xoff:0,yoff:random(-10,10),zoff:random(0,20),velx:random(3,3),vely:random(-3,3),velz:random(-3,3),startalphaf:frandom(0.8,1.0),fadestepf:(-1),sizestep:random(2,15),startroll:random(-180,180));
+	PM_SpawnParticleEx("ff0000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,60),size:random(5,10),xoff:0,yoff:random(-10,10),zoff:random(0,20),velx:random(3,3),vely:random(-3,3),velz:random(-3,3),startalphaf:frandom(0.8,1.0),fadestepf:(-1),sizestep:random(2,15),startroll:random(-180,180));
 	A_SpawnProjectile("PM_DepravedBeamWarning",43,0,random(-180,180),CMF_AIMDIRECTION|CMF_OFFSETPITCH,random(1,60));
-	A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(4,8),size:random(200,400),xoff:6,yoff:0,zoff:random(10,30),startalphaf:1.0,startroll:random(-180,180));
-	A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(30,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,20),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
-	A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(30,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,20),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(4,8),size:random(200,400),xoff:6,yoff:0,zoff:random(10,30),startalphaf:1.0,startroll:random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(30,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,20),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
+	PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(30,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,20),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
 	A_SpawnItemEx("PM_BlackMeatChunkLauncher",random(-2,2),random(-2,2),random(5,20),0,0,0,0,SXF_NOCHECKPOSITION);
 	}
     INCX K -1;
@@ -549,14 +549,14 @@ Class PM_DepravedBeamWarning : Actor
 	TNT1 A 0 A_StartSound("PM/ShockWarning",CHAN_6);
 	TNT1 A 0
 	{
-	 A_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 12,size: frandom(60,90),startalphaf: 1
+	 PM_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 12,size: frandom(60,90),startalphaf: 1
 	 ,fadestepf: -1,sizestep: -5,startroll: frandom(-180,180),rollvel: frandom(-20,20));
-	 A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(20,80),size: frandom(70,140),startalphaf: frandom(0.3,0.85)
+	 PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(20,80),size: frandom(70,140),startalphaf: frandom(0.3,0.85)
 	 ,fadestepf: -1,sizestep: -0.05,startroll: random(-180,180));
 	}
-	TNT1 AAAAAAAAAAA 0 { A_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,250),size: frandom(0.2,13),velx: frandom(-5,5),vely: frandom(-5,5),velz: frandom(0.3,10),accelz: frandom(-0.1,-1),startalphaf: 1.0
+	TNT1 AAAAAAAAAAA 0 { PM_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,250),size: frandom(0.2,13),velx: frandom(-5,5),vely: frandom(-5,5),velz: frandom(0.3,10),accelz: frandom(-0.1,-1),startalphaf: 1.0
 	,fadestepf: -1,sizestep: -0.2,startroll: random(-180,180)); }
-	TNT1 AAA 0 { A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(2,10),size: random(10,125),velx: random(-3,3),vely: random(-3,3),velz: random(-3,3),startalphaf: 0.9,startroll: random(-180,180)); }
+	TNT1 AAA 0 { PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(2,10),size: random(10,125),velx: random(-3,3),vely: random(-3,3),velz: random(-3,3),startalphaf: 0.9,startroll: random(-180,180)); }
 	TNT1 AA 0 A_SpawnItemEx("PM_ConduitFallingSparks",0,0,0,random(-8,8),random(-8,8),random(2,15),0,SXF_NOCHECKPOSITION,180);
 	TNT1 A 6 Bright Light("ShadowBall4");
 	Stop;
@@ -585,14 +585,14 @@ Class PM_DepravedElectricFx : Actor
 	TNT1 A 0 A_StartSound("PM/ShockWarning",CHAN_6);
 	TNT1 A 0
 	{
-	 A_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 12,size: frandom(60,90),startalphaf: 1
+	 PM_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 12,size: frandom(60,90),startalphaf: 1
 	 ,fadestepf: -1,sizestep: -5,startroll: frandom(-180,180),rollvel: frandom(-20,20));
-	 A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(20,80),size: frandom(70,140),startalphaf: frandom(0.3,0.85)
+	 PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(20,80),size: frandom(70,140),startalphaf: frandom(0.3,0.85)
 	 ,fadestepf: -1,sizestep: -0.05,startroll: random(-180,180));
 	}
-	TNT1 AAAAAAAAAAA 0 { A_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,250),size: frandom(0.2,13),velx: frandom(-5,5),vely: frandom(-5,5),velz: frandom(0.3,10),accelz: frandom(-0.1,-1),startalphaf: 1.0
+	TNT1 AAAAAAAAAAA 0 { PM_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,250),size: frandom(0.2,13),velx: frandom(-5,5),vely: frandom(-5,5),velz: frandom(0.3,10),accelz: frandom(-0.1,-1),startalphaf: 1.0
 	,fadestepf: -1,sizestep: -0.2,startroll: random(-180,180)); }
-	TNT1 AAA 0 { A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(2,10),size: random(10,125),velx: random(-3,3),vely: random(-3,3),velz: random(-3,3),startalphaf: 0.9,startroll: random(-180,180)); }
+	TNT1 AAA 0 { PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(2,10),size: random(10,125),velx: random(-3,3),vely: random(-3,3),velz: random(-3,3),startalphaf: 0.9,startroll: random(-180,180)); }
 	TNT1 AA 0 A_SpawnItemEx("PM_ConduitFallingSparks",0,0,0,random(-8,8),random(-8,8),random(2,15),0,SXF_NOCHECKPOSITION,180);
 	TNT1 A 6 Bright Light("ShadowBall4");
 	Stop;
@@ -625,14 +625,14 @@ Class PM_DepravedEyeLaser : Actor
 	TNT1 A 0;
 	TNT1 A 0
 	{
-	 A_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 6,size: frandom(60,90),startalphaf: 1
+	 PM_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 6,size: frandom(60,90),startalphaf: 1
 	 ,fadestepf: -1,sizestep: -5,startroll: frandom(-180,180),rollvel: frandom(-20,20));
-	 A_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(1,8),size: frandom(10,600),startalphaf: frandom(0.3,0.95)
+	 PM_SpawnParticleEx("",TexMan.CheckForTexture("DTPRR0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(1,8),size: frandom(10,600),startalphaf: frandom(0.3,0.95)
 	 ,fadestepf: -1,sizestep: -0.05,startroll: random(-180,180));
 	}
-	TNT1 A 0 { if (!random(0, 10)) A_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,250),size: frandom(0.2,13),velx: frandom(-5,5),vely: frandom(-5,5),velz: frandom(0.3,10),accelz: frandom(-0.1,-1),startalphaf: 1.0
+	TNT1 A 0 { if (!random(0, 10)) PM_SpawnParticleEx("",TexMan.CheckForTexture("SPKRA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(30,250),size: frandom(0.2,13),velx: frandom(-5,5),vely: frandom(-5,5),velz: frandom(0.3,10),accelz: frandom(-0.1,-1),startalphaf: 1.0
 	,fadestepf: -1,sizestep: -0.2,startroll: random(-180,180)); }
-	TNT1 A 0 { if (!random(0, 10)) A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(2,10),size: random(10,125),velx: random(-3,3),vely: random(-3,3),velz: random(-3,3),startalphaf: 0.9,startroll: random(-180,180)); }
+	TNT1 A 0 { if (!random(0, 10)) PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(2,10),size: random(10,125),velx: random(-3,3),vely: random(-3,3),velz: random(-3,3),startalphaf: 0.9,startroll: random(-180,180)); }
 	Stop;
 	}
 }
@@ -665,9 +665,9 @@ Class PM_DepravedSpit : Actor
 	Spawn:
 		TNT1 A 1
 		{
-		if (!random(0, 3)) A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(20,180),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
-		if (!random(0, 25)) A_SpawnParticleEx("",TexMan.CheckForTexture("SCA1F0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 2,size: frandom(20,75),xoff: random(1,15),zoff: random(4,9),startalphaf: 1,startroll: random(-180,180));
-		A_SpawnParticleEx("000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(10,15),size: 70,xoff: frandom(-12,12),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(-1,1),startalphaf: 1
+		if (!random(0, 3)) PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(20,180),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
+		if (!random(0, 25)) PM_SpawnParticleEx("",TexMan.CheckForTexture("SCA1F0"),style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 2,size: frandom(20,75),xoff: random(1,15),zoff: random(4,9),startalphaf: 1,startroll: random(-180,180));
+		PM_SpawnParticleEx("000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(10,15),size: 70,xoff: frandom(-12,12),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(-1,1),startalphaf: 1
 	  ,fadestepf: -1,sizestep: -1,startroll: random(-180,180));
 		if (!random(0, 8)) A_SpawnItemEx("PM_BlackBlood1",0,0,0,0,0,0,0,128);
 		}
@@ -678,10 +678,10 @@ Class PM_DepravedSpit : Actor
 		TNT1 A 0 A_StartSound("PM/AcidBall",25);
 		TNT1 A 0 A_StartSound("EntAva/Soul",26);
 		TNT1 AAAA 0 A_SpawnItemEx("PM_DepravedExplosionFlames",0,0,0,random(-3,3),random(-3,3),random(-2,3),0, flags: SXF_NOCHECKPOSITION|SXF_TRANSFERSCALE);
-		TNT1 AA 0 A_SpawnParticleEx("#000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_RELATIVE|SPF_ROLL,lifetime: random(50,450),size: frandom(70,150),velx: frandom(-0.4,0.4),vely: frandom(-0.4,0.4),velz: frandom(-0.1,0.2),startalphaf: frandom(0.5,1.0),fadestepf: -1,sizestep: frandom(0.0,2.5),startroll: random(-180,180),rollvel: frandom(-0.5,0.5));
+		TNT1 AA 0 PM_SpawnParticleEx("#000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_RELATIVE|SPF_ROLL,lifetime: random(50,450),size: frandom(70,150),velx: frandom(-0.4,0.4),vely: frandom(-0.4,0.4),velz: frandom(-0.1,0.2),startalphaf: frandom(0.5,1.0),fadestepf: -1,sizestep: frandom(0.0,2.5),startroll: random(-180,180),rollvel: frandom(-0.5,0.5));
 		TNT1 AAAAA 0
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (
 		"000000",
 		TexMan.CheckForTexture("GNSMK0"),
@@ -701,7 +701,7 @@ Class PM_DepravedSpit : Actor
 		startroll: random(-180,180),
 		rollvel: frandom(-0.3,0.3)
 		);
-		A_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(100,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,20),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
+		PM_SpawnParticleEx("",TexMan.CheckForTexture("REDLA0"),style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,10),size: random(100,500),xoff: random(-50,50), yoff: random(-50,50), zoff: random(0,20),velx: random(-1,1),vely: random(-1,1),velz: random(-1,1),startalphaf: 0.9,startroll: random(-180,180));
 		}
 		TNT1 AAAA 0 A_SpawnItemEx("PM_BlackBlood1",0,0,0,random(-10,10),random(-10,10),random(5,20),0,128);
 		BZRB CDE 6;
@@ -742,14 +742,14 @@ Class PM_DepravedHomingSpit : Actor
 		TNT1 A 1
 		{
 		A_SeekerMissile(1,1);
-		A_SpawnParticleEx("000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(10,15),size: 40,xoff: frandom(-12,12),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(-1,1),startalphaf: 1
+		PM_SpawnParticleEx("000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(10,15),size: 40,xoff: frandom(-12,12),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(-1,1),startalphaf: 1
 	  ,fadestepf: -1,sizestep: -1,startroll: random(-180,180));
 		if (!random(0, 8)) A_SpawnItemEx("PM_BlackBlood1",0,0,0,0,0,0,0,128);
 		}
 		Loop;
 	Death:
 		TNT1 AAAA 0 A_SpawnItemEx("PM_BlackBlood1",0,0,0,random(-5,5),random(-5,5),random(-2,10),0,128);
-		TNT1 A 0 A_SpawnParticleEx("#000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_RELATIVE|SPF_ROLL,lifetime: random(50,450),size: frandom(20,100),velx: frandom(-0.4,0.4),vely: frandom(-0.4,0.4),velz: frandom(-0.1,0.2),startalphaf: frandom(0.5,1.0),fadestepf: -1,sizestep: frandom(0.0,2.5),startroll: random(-180,180),rollvel: frandom(-0.5,0.5));
+		TNT1 A 0 PM_SpawnParticleEx("#000000",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_RELATIVE|SPF_ROLL,lifetime: random(50,450),size: frandom(20,100),velx: frandom(-0.4,0.4),vely: frandom(-0.4,0.4),velz: frandom(-0.1,0.2),startalphaf: frandom(0.5,1.0),fadestepf: -1,sizestep: frandom(0.0,2.5),startroll: random(-180,180),rollvel: frandom(-0.5,0.5));
 		BZRB CDE 6;
 		Stop;
 	}

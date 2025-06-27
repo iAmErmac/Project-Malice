@@ -233,7 +233,7 @@ Class PM_DecayedSoldier : PMPestilenceMonsterBase
 			  if(bloattimer < 0)
 			   SetStateLabel("BloatDeathGo");
 			  if(random(1,3) == 1)
-	           A_SpawnParticleEx("252D00",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(54,80),size: frandom(15,45), xoff:random(-15,15), yoff:random(-15,15), zoff:random(0,5), velx: frandom(-0.1,0.1),vely: frandom(-0.1,0.1),velz: frandom(1,2),accelx: frandom(-0.02,0.02),accely: frandom(-0.02,0.02),accelz: frandom(-0.03,0.01),startalphaf: frandom(0.3,0.6),fadestepf: -0.001,sizestep: frandom(0.2,1),startroll: random(-180,180),rollvel: random(-2,2));
+	           PM_SpawnParticleEx("252D00",TexMan.CheckForTexture("GNSMK0"),style: STYLE_Normal,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(54,80),size: frandom(15,45), xoff:random(-15,15), yoff:random(-15,15), zoff:random(0,5), velx: frandom(-0.1,0.1),vely: frandom(-0.1,0.1),velz: frandom(1,2),accelx: frandom(-0.02,0.02),accely: frandom(-0.02,0.02),accelz: frandom(-0.03,0.01),startalphaf: frandom(0.3,0.6),fadestepf: -0.001,sizestep: frandom(0.2,1),startroll: random(-180,180),rollvel: random(-2,2));
 			  bloattimer--;
 			 }
 	    Goto BloatDeath+4;

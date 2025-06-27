@@ -237,7 +237,7 @@ Class PM_CorpulentBall : Fatshot
     TNT1 A 0;
 	  TNT1 A 0
 	  {
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		tex[0],
@@ -250,7 +250,7 @@ Class PM_CorpulentBall : Fatshot
 		sizestep: frandom(0.0,3),
 		startroll: random(-180,180)
 		);
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		tex[1],
@@ -264,7 +264,7 @@ Class PM_CorpulentBall : Fatshot
 		startroll: random(-180,180)
 		);
 		for(int i=random(5,8);i>0;i--)
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		tex[2],

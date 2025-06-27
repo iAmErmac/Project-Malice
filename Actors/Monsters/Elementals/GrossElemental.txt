@@ -251,7 +251,7 @@ Class PM_GElemVenomBurst : CacodemonBall
        A_SetRoll(random(0,360));
 	   A_SpawnParticle("A6 FE 6C",SPF_RELATIVE,37,12,0,frandom(-15,15),frandom(-15,15),frandom(-15,15),0,0,0,0,0,0,1,-1,0);
 	   A_SpawnParticle("59bd2e",SPF_RELATIVE,54,8,0,frandom(-25,25),frandom(-25,25),frandom(-25,25),0,0,0,0,0,0,1,-1,0);
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	( "259629", TexMan.CheckForTexture("DTPRA0"), style: STYLE_Add, flags: SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL,
 	lifetime: 25, size: 90.0, xoff: -4, startalphaf: 0.55, fadestepf: -1, sizestep: -5, startroll: random(-180,180));
      }

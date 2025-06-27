@@ -343,7 +343,7 @@ Class PM_InfestedRotflyKamikaze : DoomImpBall
   Spawn:
 	BFLY AB 2 Bright
 	{
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 		(
 		"bdff00",
 		TexMan.CheckForTexture("DTPRA0"),

@@ -346,8 +346,8 @@ Class PM_SquireFireball : DoomImpBall
 	{
 	A_SpawnItemEx("PM_GreenFlameTrails",0,0,0,0,0,0,0,128,0);
 	A_Weave(random(-3,3), random(-3,3), random(0,3), random(0,2));
-    A_SpawnParticleEx("",TexMan.CheckForTexture("GNSML0"),style: STYLE_None,flags: SPF_ROLL|SPF_RELATIVE,lifetime: 30,size: 30.0,xoff: -10,velx: frandom(-0.3,0.3),vely: frandom(-0.3,0.3),velz: frandom(-0.3,0.3),startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
-	A_SpawnParticleEx("", TexMan.CheckForTexture("DTPRA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 1, size: 85.0, xoff: -10, startalphaf: 0.5, startroll: random(-180,180));
+    PM_SpawnParticleEx("",TexMan.CheckForTexture("GNSML0"),style: STYLE_None,flags: SPF_ROLL|SPF_RELATIVE,lifetime: 30,size: 30.0,xoff: -10,velx: frandom(-0.3,0.3),vely: frandom(-0.3,0.3),velz: frandom(-0.3,0.3),startalphaf: 0.4,fadestepf: -1,startroll: random(-180,180));
+	PM_SpawnParticleEx("", TexMan.CheckForTexture("DTPRA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: 1, size: 85.0, xoff: -10, startalphaf: 0.5, startroll: random(-180,180));
 	}
 	loop;
   Death:

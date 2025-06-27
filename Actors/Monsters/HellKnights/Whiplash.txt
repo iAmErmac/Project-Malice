@@ -397,7 +397,7 @@ Class PM_WhiplashKnife : MageWandMissile
     BLA2 A 1 BRIGHT Light("WhipKnife")
 	{
 	 A_SpawnItemEx("PM_WKnifeBlur");
-	 A_SpawnParticleEx
+	 PM_SpawnParticleEx
 	 ( "", tex[0], style: STYLE_Add,
 	 flags: SPF_FULLBRIGHT|SPF_ROLL|SPF_RELATIVE, lifetime: random(1,80), size: random(1,8),
 	 xoff: frandom(-3,3), yoff: frandom(-3,3), zoff: frandom(-3,3), velx: frandom(-1,1), vely: frandom(-1,1), velz: frandom(-1,1),

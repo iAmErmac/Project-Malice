@@ -50,7 +50,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 	
 	void PM_WickedWretchCopyCharge()
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 	    tex[0],
@@ -65,7 +65,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 		sizestep: 0,
 		startroll: random(-180,180)
 		);
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		tex[1],
@@ -85,7 +85,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 	
 	void PM_WickedCharge()
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 	    tex[0],
@@ -234,7 +234,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 	        }
 			WIC2 IIIIIIIIIIIIIIIIIIIIIIIJJJJJJJ 1 Light("Greenball2")
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CA22A0"),
@@ -253,7 +253,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 JJJJJJJJJJJJ 1 Light("Greenball3")
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CA22A0"),
@@ -272,7 +272,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 KKKKKK 5 
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("C1C2D1"),
@@ -319,7 +319,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 	        }
 			WIC2 IIIIIIIIIIIIIIIIIIIIIIIJJJJJJJ 1 Light("Greenball2")
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CAC4A1"),
@@ -338,7 +338,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 JJJJJJJJJJJJ 1 Light("Greenball3")
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CAC4B1"),
@@ -357,7 +357,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 KKK 18 
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CAC4D1"),
@@ -403,7 +403,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 	        }
 			WIC2 IIIIIIIIIIIIIJJJJJJJ 3 Light("Greenball2")
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CAB1D1"),
@@ -422,7 +422,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 JJJJJJJJJJJJ 1 Light("Greenball3")
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CAB1C1"),
@@ -441,7 +441,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 K 20 
 			{
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 				(
 				"4EFF33",
 				TexMan.CheckForTexture("CAB1D1"),
@@ -488,7 +488,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 	        }
 			WIC2 IIIIIIIIIIIIIIIIIIIIIIIJJJJJJJ 1 Light("Greenball2")
 			{
-				A_SpawnParticleEx(
+				PM_SpawnParticleEx(
 				"4EFF33", TexMan.CheckForTexture("INFRA1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
 				lifetime: 30, size: 105, xoff: 20, zoff: 60, startalphaf: 1, fadestepf: 0.1, startroll: 180);
 				A_FaceTarget();
@@ -496,7 +496,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 JJJJJJJJJJJJ 1 Light("Greenball3")
 			{
-				A_SpawnParticleEx(
+				PM_SpawnParticleEx(
 				"4EFF33", TexMan.CheckForTexture("INFRE1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
 				lifetime: 30, size: 105, xoff: 20, zoff: 60, startalphaf: 1, fadestepf: 0.1, startroll: 180);
 				A_FaceTarget();
@@ -504,7 +504,7 @@ Class PM_Wicked : PMEnvyMonsterBase
 			}
 			WIC2 K 5 
 			{
-				A_SpawnParticleEx(
+				PM_SpawnParticleEx(
 				"4EFF33", TexMan.CheckForTexture("INFRF1"), style: STYLE_ADD, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
 				lifetime: 30, size: 105, xoff: 20, zoff: 60, startalphaf: 1, fadestepf: 0.1, startroll: 180);
 				A_SpawnItemEx("PM_WickedInfernalCopy",50,0,32,flags:SXF_NOCHECKPOSITION);
@@ -619,7 +619,7 @@ Class WickedShot : Actor
 			  }
 			A_SeekerMissile(1,90,SMF_CURSPEED|SMF_PRECISE);
 			A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,27,0,random(-22,-15),random(-5,5),random(-5,5),1,0,0,0,0,0,1,-1,-0.8);
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 	         (
 		     "",
 		     tex[0],
@@ -640,7 +640,7 @@ Class WickedShot : Actor
 			{
 			A_SeekerMissile(1,1);
 			A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,27,0,random(-22,-15),random(-5,5),random(-5,5),1,0,0,0,0,0,1,-1,-0.8);
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 	         (
 		     "",
 		     tex[0],
@@ -651,7 +651,7 @@ Class WickedShot : Actor
 		     xoff: -10,
 		     startalphaf: 0.35
 	         );
-		     A_SpawnParticleEx
+		     PM_SpawnParticleEx
 		     (
 		     "",
 		     tex[1],
@@ -666,7 +666,7 @@ Class WickedShot : Actor
 		Death:
 		   TNT1 AAAAAAAAAAAAAAA 0
 		   {
-		    A_SpawnParticleEx
+		    PM_SpawnParticleEx
 	        (
 		    "",
 		    tex[1],
@@ -683,7 +683,7 @@ Class WickedShot : Actor
 		   }
 		   TNT1 AAAAA 0
 		   {
-	        A_SpawnParticleEx
+	        PM_SpawnParticleEx
 		    (
 		    "80FF38",
 		    tex[2],
@@ -700,7 +700,7 @@ Class WickedShot : Actor
 		   }
 		   TNT1 AA 0 
 		    {
-		     A_SpawnParticleEx
+		     PM_SpawnParticleEx
 		     (
 		     "",
 		     tex[1],
@@ -743,7 +743,7 @@ Class WickedRevolveShot1 : WickedShot
 				A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,27,0,random(-22,-15),random(-5,5),random(-5,5),1,0,0,0,0,0,1,-1,-0.8);
 				A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,27,0,random(-22,-15),random(-5,5),random(-5,5),1,0,0,0,0,0,1,-1,-0.8);
 				A_Weave(2,0,2.7,0);
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 	         (
 		     "",
 		     tex[0],
@@ -772,7 +772,7 @@ Class WickedRevolveShot1 : WickedShot
 		Death:
 		   TNT1 AAAAAAAAAAAAAAA 0
 		   {
-		    A_SpawnParticleEx
+		    PM_SpawnParticleEx
 	        (
 		    "",
 		    tex[1],
@@ -789,7 +789,7 @@ Class WickedRevolveShot1 : WickedShot
 		   }
 		   TNT1 AAAAA 0
 		   {
-	        A_SpawnParticleEx
+	        PM_SpawnParticleEx
 		    (
 		    "80FF38",
 		    tex[2],
@@ -806,7 +806,7 @@ Class WickedRevolveShot1 : WickedShot
 		   }
 		   TNT1 AA 0 
 		    {
-		     A_SpawnParticleEx
+		     PM_SpawnParticleEx
 		     (
 		     "",
 		     tex[1],
@@ -849,7 +849,7 @@ Class WickedRevolveShot2 : WickedShot
 				A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,27,0,random(-22,-15),random(-5,5),random(-5,5),1,0,0,0,0,0,1,-1,-0.8);
 				A_SpawnParticle("80FF38",SPF_FULLBRIGHT|SPF_RELATIVE,95,27,0,random(-22,-15),random(-5,5),random(-5,5),1,0,0,0,0,0,1,-1,-0.8);
 				A_Weave(-2,0,2.7,0);
-				A_SpawnParticleEx
+				PM_SpawnParticleEx
 	         (
 		     "",
 		     tex[0],
@@ -878,7 +878,7 @@ Class WickedRevolveShot2 : WickedShot
 		Death:
 		   TNT1 AAAAAAAAAAAAAAA 0
 		   {
-		    A_SpawnParticleEx
+		    PM_SpawnParticleEx
 	        (
 		    "",
 		    tex[1],
@@ -895,7 +895,7 @@ Class WickedRevolveShot2 : WickedShot
 		   }
 		   TNT1 AAAAA 0
 		   {
-	        A_SpawnParticleEx
+	        PM_SpawnParticleEx
 		    (
 		    "80FF38",
 		    tex[2],
@@ -912,7 +912,7 @@ Class WickedRevolveShot2 : WickedShot
 		   }
 		   TNT1 AA 0 
 		    {
-		     A_SpawnParticleEx
+		     PM_SpawnParticleEx
 		     (
 		     "",
 		     tex[1],
@@ -968,7 +968,7 @@ Class PM_WickedChaserBall : Actor
 	Spawn:
 		MSP2 AABBCCDDAABBCCDDAABBCCDDAABBCCDD 1 Light("Greenball2")
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (
 		"",
 		TexMan.CheckForTexture("GRNLA0"),
@@ -992,7 +992,7 @@ Class PM_WickedChaserBall : Actor
 		rollvel: frandom(-10,10),
 		rollacc: 0
 	    );
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("SPKOG0"),
@@ -1005,7 +1005,7 @@ Class PM_WickedChaserBall : Actor
 		fadestepf: -2,
 		startroll: random(-180,180)
 		);
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRA0"),
@@ -1018,7 +1018,7 @@ Class PM_WickedChaserBall : Actor
 		fadestepf: -2,
 		startroll: random(-180,180)
 		);
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("SPKOG0"),
@@ -1052,7 +1052,7 @@ Class PM_WickedChaserBall : Actor
 		}
 		MSP2 AABBCCDDAABBCCDD 1 Light("Greenball")
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (
 		"",
 		TexMan.CheckForTexture("GRNLA0"),
@@ -1076,7 +1076,7 @@ Class PM_WickedChaserBall : Actor
 		rollvel: frandom(-10,10),
 		rollacc: 0
 	    );
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("SPKOG0"),
@@ -1089,7 +1089,7 @@ Class PM_WickedChaserBall : Actor
 		fadestepf: -2,
 		startroll: random(-180,180)
 		);
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("DTPRA0"),
@@ -1102,7 +1102,7 @@ Class PM_WickedChaserBall : Actor
 		fadestepf: -2,
 		startroll: random(-180,180)
 		);
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		TexMan.CheckForTexture("SPKOG0"),
@@ -1129,7 +1129,7 @@ Class PM_WickedChaserBall : Actor
 		TNT1 A 0 A_StopSound(CHAN_7);
 		TNT1 AAAAAAAAAAAAAAAAAA 0
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (
 		"",
 		tex[2],
@@ -1147,7 +1147,7 @@ Class PM_WickedChaserBall : Actor
 		TNT1 AAAA 0 A_SpawnProjectile("PM_GreenShock",2,0,random(0,360),CMF_OFFSETPITCH,random(0,360));
 		TNT1 A 0 
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		tex[3],
@@ -1293,7 +1293,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		TNT1 A 0;
 		TNT1 A 0
 			{
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 			(
 			"",
 			tex[0],
@@ -1314,7 +1314,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		//TNT1 A 0 A_SpawnItemEx("WretchedBallTrail",0,0,0);
 		 TNT1 A 0  
        {
-	   A_SpawnParticleEx
+	   PM_SpawnParticleEx
 		(
 		"109A0A",
 		tex[1],
@@ -1328,7 +1328,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		sizestep: -7,
 		startroll: random(-180,180)
 		);
-        A_SpawnParticleEx
+        PM_SpawnParticleEx
 	    (
 		"",
 		tex[0],
@@ -1340,7 +1340,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		startalphaf: 0.2,
 		startroll: random(-180,180)
 	    );
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (
 		"",
 		tex[2],
@@ -1360,7 +1360,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		//TNT1 A 0 A_SpawnItemEx("WretchedBallTrail",0,0,0);
         TNT1 A 0  
        {
-		 A_SpawnParticleEx
+		 PM_SpawnParticleEx
 		(
 		"80FF38",
 		tex[1],
@@ -1374,7 +1374,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		sizestep: -7,
 		startroll: random(-180,180)
 		);
-        A_SpawnParticleEx
+        PM_SpawnParticleEx
 	    (
 		"",
 		tex[0],
@@ -1393,7 +1393,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		TNT1 A 0 A_StopSound(CHAN_7);
 		TNT1 AAAAAAAAAAAAAAAAAA 0
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (
 		"",
 		tex[2],
@@ -1411,7 +1411,7 @@ Class PM_WickedCopyBall : PM_WretchedBall
 		TNT1 AAAA 0 A_SpawnProjectile("PM_GreenShock",2,0,random(0,360),CMF_OFFSETPITCH,random(0,360));
 		TNT1 A 0 
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 		(
 		"",
 		tex[3],
@@ -1452,7 +1452,7 @@ Class PM_WickedCopyPBall : PM_PhaseCacoBall
 	 
 	 void PM_WickedPBallParticles()
 	 {
-	  			A_SpawnParticleEx
+	  			PM_SpawnParticleEx
 			(
 			"",
 			tex[1],
@@ -1466,7 +1466,7 @@ Class PM_WickedCopyPBall : PM_PhaseCacoBall
 			startalphaf: 0.9,
 			startroll: random(-180,180)
 			);
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 			(
 			"",
 			tex[2],
@@ -1501,7 +1501,7 @@ Class PM_WickedCopyPBall : PM_PhaseCacoBall
 			TNT1 A 0 A_StartSound("PhaseCaco/Fire",pitch:0.65);
 			TNT1 AAAA 0
 			{
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 			(
 			"",
 			tex[0],
@@ -1651,7 +1651,7 @@ Class PM_WickedCopyPBall : PM_PhaseCacoBall
 			TNT1 A 1 Bright A_RadiusThrust(5000,90);
 			TNT1 AAA 0
 			{
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 			(
 			"",
 			tex[0],
@@ -1668,7 +1668,7 @@ Class PM_WickedCopyPBall : PM_PhaseCacoBall
 			}
 			TNT1 AAAAAAAAAAAAAAAAAA 0
 			{
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 			(
 			"",
 			tex[1],
@@ -1687,7 +1687,7 @@ Class PM_WickedCopyPBall : PM_PhaseCacoBall
 			TNT1 AAAA 0 A_SpawnProjectile("PM_GreenShock",2,0,random(0,360),CMF_OFFSETPITCH,random(0,360));
 			TNT1 A 0
 			{
-			 A_SpawnParticleEx
+			 PM_SpawnParticleEx
 			 (
 			 "10F400",
 			 tex[3],
@@ -1799,7 +1799,7 @@ Class PM_WickedCopyEye : PM_BeholderEye
 			BEYE AAAAAAAAAAAAAA 2 Light("Greenball3") 
 			{
 			 A_FaceTarget();
-			 A_SpawnParticleEx
+			 PM_SpawnParticleEx
 			 (
 			 "",
 			 tex[0],
@@ -1908,11 +1908,11 @@ Class PM_WickedInfernalCopy : Actor
    SetStateLabel("Death");
    A_Chase("Melee",null);
    A_SpawnItemEx("PM_GenericPhaseGhost",flags:SXF_TRANSFERSPRITEFRAME|SXF_TRANSFERSTENCILCOL|SXF_TRANSFERSCALE);
-   A_SpawnParticleEx(
+   PM_SpawnParticleEx(
 	"7ce24f", tex[0], style: STYLE_Add, flags: SPF_ROLL|SPF_RELATIVE, lifetime: random(50,140),
 	size: frandom(20,115), xoff: frandom(-20,20), yoff: frandom(-20,20), zoff: frandom(0,60), velx: frandom(-1,4), vely: frandom(-1,1), velz: frandom(-1,1),
 	startalphaf: frandom(0.1,0.70), fadestepf: -1, sizestep: frandom(0.0,0.8), startroll: random(-180,180), rollvel: frandom(-0.3,0.3));
-   A_SpawnParticleEx(
+   PM_SpawnParticleEx(
 	"", tex[1], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: random(40,120),
 	size: frandom(0.2,25), xoff: random(-30,30), yoff: random(-30,30), zoff: random(0,60), velx: frandom(-0.6,0.6), vely: frandom(-0.6,0.6), velz: frandom(-0.6,1),
 	startalphaf: 1.0, fadestepf: -1, sizestep: -0.2, startroll: random(-180,180));
@@ -1927,7 +1927,7 @@ Class PM_WickedInfernalCopy : Actor
 	Radius_Quake (1, 2, 0, 7, 0);
 	A_FaceTarget();
 	A_Recoil(-0.050);
-    A_SpawnParticleEx(
+    PM_SpawnParticleEx(
 	"", tex[0], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: random(50,80),
 	size: frandom(1,400), xoff: random(-30,30), yoff: random(-30,30), zoff: random(-10,70), startalphaf: frandom(0.3,0.7), startroll: random(-180,180));
    }
@@ -1939,14 +1939,14 @@ Class PM_WickedInfernalCopy : Actor
    A_ChangeVelocity(0,0,0,CVF_REPLACE); }
    TNT1 A 0 {
     for(int i=4;i>0;i--)
-   	A_SpawnParticleEx(
+   	PM_SpawnParticleEx(
 	"", tex[0], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
 	lifetime: 8, size: 360, zoff: 40, startalphaf: 1, startroll: random(-180,180));
-    A_SpawnParticleEx(   
+    PM_SpawnParticleEx(   
 	"", tex[1], style: STYLE_Add, flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,
 	lifetime: 20, size: 800, zoff: 50, startalphaf: 1, fadestepf: -1, sizestep: -25, startroll: random(-180,180));
 	for(int i=15;i>0;i--)
-	A_SpawnParticleEx(
+	PM_SpawnParticleEx(
 	"727272", tex[3], style: STYLE_Normal, flags: SPF_RELATIVE|SPF_ROLL,
 	lifetime: random(40,70), size: frandom(2,35), zoff: random(10,60), velx: frandom(-8,8), vely: frandom(-8,8), velz: frandom(-8,12),
 	accelz: frandom(-0.1,-0.5), startalphaf: 1.0, sizestep: -0.2, startroll: random(-180,180), rollvel: random(-4,4));
@@ -1960,7 +1960,7 @@ Class PM_WickedInfernalCopy : Actor
 	vel.y += frandom(-0.50,0.50);
 	vel.z += frandom(-0.50,0.50);
 	angle = frandom(0,360);
-	A_SpawnParticleEx(   
+	PM_SpawnParticleEx(   
 	"87ff52", tex[0], style: STYLE_Add, flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,
 	lifetime: random(45,67), size: 90.0, xoff: frandom(-3.5,3.5), yoff: frandom(-3.5,3.5), zoff: frandom(-3.5,3.5) + 30, velx: frandom(-1,1), vely: frandom(-1,1),
 	velz: frandom(-1,1), startalphaf: (alpha / 2), fadestepf: -1, sizestep: 2, startroll: random(-180,180));

@@ -37,7 +37,7 @@ Class PM_Nightmare : PMUmbralMonsterBase
 	void PM_NightmareVisibleParticles()
 	{
 	 A_SpawnItemEx("PM_GenericRushGhost",0,0,0,random(-8,-1),0,random(-3,3),0,SXF_TRANSFERRENDERSTYLE|SXF_TRANSFERSPRITEFRAME|SXF_TRANSFERSCALE);
-	 A_SpawnParticleEx
+	 PM_SpawnParticleEx
 	 (
 	 "",
 	 TexMan.CheckForTexture("SPKOS0"),
@@ -55,7 +55,7 @@ Class PM_Nightmare : PMUmbralMonsterBase
 	void PM_NightmareInvisParticles()
 	{
 	 if(random(1,5) == 1)
-	 A_SpawnParticleEx
+	 PM_SpawnParticleEx
 	 (
 	 "",
 	 TexMan.CheckForTexture("SPKOS0"),
@@ -188,7 +188,7 @@ Class PM_Nightmare : PMUmbralMonsterBase
     NMRE I 0 A_Fall();
     NMRE JJJKKKLLLLMMMNNNOOO 1
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "000000",
 		 TexMan.CheckForTexture("GNSMK0"),

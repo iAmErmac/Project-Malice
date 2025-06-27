@@ -49,18 +49,18 @@ Class PM_Abhorrent : PMDeathMonsterBase
 
     void PM_AbhorrentWither()
 	{
-	 A_SpawnParticleEx("545454",tex[1],style: STYLE_None,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(50,160),size: frandom(30,100),xoff: frandom(-40,40),yoff: frandom(-40,40),velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(0,2),startalphaf: frandom(0.2,0.95)
+	 PM_SpawnParticleEx("545454",tex[1],style: STYLE_None,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(50,160),size: frandom(30,100),xoff: frandom(-40,40),yoff: frandom(-40,40),velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(0,2),startalphaf: frandom(0.2,0.95)
 	 ,fadestepf: -1,sizestep: frandom(-0.8,0.8),startroll: random(-180,180),rollvel: frandom(-0.3,0.3));
-	 A_SpawnParticleEx("848484",tex[0],style: STYLE_Normal,flags: SPF_RELATIVE|SPF_ROLL,lifetime: random(90,270),size: frandom(1,32),xoff: random(-40,40),yoff: random(-40,40),zoff: 5,velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(0.3,4),startalphaf: 1.0
+	 PM_SpawnParticleEx("848484",tex[0],style: STYLE_Normal,flags: SPF_RELATIVE|SPF_ROLL,lifetime: random(90,270),size: frandom(1,32),xoff: random(-40,40),yoff: random(-40,40),zoff: 5,velx: frandom(-1,1),vely: frandom(-1,1),velz: frandom(0.3,4),startalphaf: 1.0
 	 ,fadestepf: -0.05,sizestep: frandom(-0.1,-1),startroll: random(-180,180),rollvel: random(-4,4));
 	}
 
 	void PM_AbhorrentBarrageCharge()
 	{
-	 A_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(500,820),size: frandom(10,320),xoff: frandom(20,25),yoff: 34,zoff: frandom(-3.5,3.5) + 25,startalphaf: 0.07,fadestepf: -1,startroll: random(-180,180));
-	 A_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(500,820),size: frandom(10,320),xoff: frandom(20,25),yoff: -34,zoff: frandom(-3.5,3.5) + 25,startalphaf: 0.07,fadestepf: -1,startroll: random(-180,180));
-	 A_SpawnParticleEx("",tex[3],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,50),size: random(3,15),xoff: frandom(20,25),yoff: 34,zoff: frandom(-3.5,3.5) + 25,velx: frandom(-0.95,0.95),vely: frandom(-0.95,0.95),velz: frandom(-0.95,0.95),startalphaf: frandom(0.25,0.9),fadestepf: 0,sizestep: 0,startroll: random(-180,180),rollvel: frandom(-30,30));
-	 A_SpawnParticleEx("",tex[3],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,50),size: random(3,15),xoff: frandom(20,25),yoff: -34,zoff: frandom(-3.5,3.5) + 25,velx: frandom(-0.95,0.95),vely: frandom(-0.95,0.95),velz: frandom(-0.95,0.95),startalphaf: frandom(0.25,0.9),fadestepf: 0,sizestep: 0,startroll: random(-180,180),rollvel: frandom(-30,30));
+	 PM_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(500,820),size: frandom(10,320),xoff: frandom(20,25),yoff: 34,zoff: frandom(-3.5,3.5) + 25,startalphaf: 0.07,fadestepf: -1,startroll: random(-180,180));
+	 PM_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(500,820),size: frandom(10,320),xoff: frandom(20,25),yoff: -34,zoff: frandom(-3.5,3.5) + 25,startalphaf: 0.07,fadestepf: -1,startroll: random(-180,180));
+	 PM_SpawnParticleEx("",tex[3],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,50),size: random(3,15),xoff: frandom(20,25),yoff: 34,zoff: frandom(-3.5,3.5) + 25,velx: frandom(-0.95,0.95),vely: frandom(-0.95,0.95),velz: frandom(-0.95,0.95),startalphaf: frandom(0.25,0.9),fadestepf: 0,sizestep: 0,startroll: random(-180,180),rollvel: frandom(-30,30));
+	 PM_SpawnParticleEx("",tex[3],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,50),size: random(3,15),xoff: frandom(20,25),yoff: -34,zoff: frandom(-3.5,3.5) + 25,velx: frandom(-0.95,0.95),vely: frandom(-0.95,0.95),velz: frandom(-0.95,0.95),startalphaf: frandom(0.25,0.9),fadestepf: 0,sizestep: 0,startroll: random(-180,180),rollvel: frandom(-30,30));
 	}
 
   States
@@ -270,19 +270,19 @@ Class PM_AbhorBall : Fatshot
 	{
 	  A_SeekerMissile(0,0,SMF_PRECISE);
 	 for(int i=random(2,4);i>0;i--)
-	  A_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,45),size: random(40,65),xoff: -5,velx: frandom(-0.45,0.45),vely: frandom(-0.45,0.45),velz: frandom(-0.45,0.45),accelx: frandom(0.25,0.95),accely: frandom(-0.15,0.15),accelz: frandom(-0.35,0.35),startalphaf: frandom(0.25,0.65),fadestepf: -1,sizestep: 2,startroll: random(-180,180),rollvel: random(-3,3));
-	  A_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT,lifetime: random(5,15),size: 280,startalphaf: 1.0,fadestepf: 0,sizestep: -20,startroll: random(-180,180));
+	  PM_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,45),size: random(40,65),xoff: -5,velx: frandom(-0.45,0.45),vely: frandom(-0.45,0.45),velz: frandom(-0.45,0.45),accelx: frandom(0.25,0.95),accely: frandom(-0.15,0.15),accelz: frandom(-0.35,0.35),startalphaf: frandom(0.25,0.65),fadestepf: -1,sizestep: 2,startroll: random(-180,180),rollvel: random(-3,3));
+	  PM_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT,lifetime: random(5,15),size: 280,startalphaf: 1.0,fadestepf: 0,sizestep: -20,startroll: random(-180,180));
 	 for(int i=random(10,20);i>0;i--)
-	  A_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,100),size: frandom(3,20),xoff: frandom(-2,2),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(1,10),vely: frandom(-3,3),velz: frandom(-0.1,4),accelx: frandom(-0.005,0.005),accely: frandom(-0.005,0.005),accelz: frandom(-0.0,-0.3),startalphaf: 1.0,fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
+	  PM_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,100),size: frandom(3,20),xoff: frandom(-2,2),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(1,10),vely: frandom(-3,3),velz: frandom(-0.1,4),accelx: frandom(-0.005,0.005),accely: frandom(-0.005,0.005),accelz: frandom(-0.0,-0.3),startalphaf: 1.0,fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
 	}
   Go:
     ABHB AABB 1 Bright Light("SoulHarvesterBall1")
 	{
 	  A_SeekerMissile(1,1,SMF_PRECISE);
-	  A_SpawnParticleEx("61A9FF",tex[2],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(10,50),size: frandom(0.1,10),xoff: random(-7,0),yoff: random(-5,5),zoff: random(-5,5),velx: frandom(-0.6,0.6),vely: frandom(-0.6,0.6),velz: frandom(-0.6,1),startalphaf: 1.0, fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
-	  A_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 1,size: frandom(60.0,175.0),xoff: -8,startalphaf: frandom(0.2,0.70),startroll: random(-180,180));
-      A_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL,lifetime: random(1,2),size: random(45,80),xoff: 5,startalphaf: frandom(0.15,0.85),startroll: random(-180,180));
-	  A_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,80),size: 65.0,xoff: -5,velx: frandom(-0.05,0.05),vely: frandom(-0.05,0.05),velz: frandom(-0.05,0.05),startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180),rollvel: random(-3,3));
+	  PM_SpawnParticleEx("61A9FF",tex[2],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(10,50),size: frandom(0.1,10),xoff: random(-7,0),yoff: random(-5,5),zoff: random(-5,5),velx: frandom(-0.6,0.6),vely: frandom(-0.6,0.6),velz: frandom(-0.6,1),startalphaf: 1.0, fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
+	  PM_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: 1,size: frandom(60.0,175.0),xoff: -8,startalphaf: frandom(0.2,0.70),startroll: random(-180,180));
+      PM_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL,lifetime: random(1,2),size: random(45,80),xoff: 5,startalphaf: frandom(0.15,0.85),startroll: random(-180,180));
+	  PM_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,80),size: 65.0,xoff: -5,velx: frandom(-0.05,0.05),vely: frandom(-0.05,0.05),velz: frandom(-0.05,0.05),startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180),rollvel: random(-3,3));
 	}
     Loop;
   Death:
@@ -324,10 +324,10 @@ Class PM_AbhorBarrageBall : Fatshot
 	 soulhspeed = random(-3,3);
 	 soulhdist = random(-5,5);
 	  for(int i=random(2,4);i>0;i--)
-	    A_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,45),size: random(40,65),xoff: -5,velx: frandom(-0.45,0.45),vely: frandom(-0.45,0.45),velz: frandom(-0.45,0.45),accelx: frandom(0.25,0.95),accely: frandom(-0.15,0.15),accelz: frandom(-0.35,0.35),startalphaf: frandom(0.25,0.65),fadestepf: -1,sizestep: 2,startroll: random(-180,180),rollvel: random(-3,3));
-	    A_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT,lifetime: random(5,15),size: 280,startalphaf: 1.0,fadestepf: 0,sizestep: -20,startroll: random(-180,180));
+	    PM_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,45),size: random(40,65),xoff: -5,velx: frandom(-0.45,0.45),vely: frandom(-0.45,0.45),velz: frandom(-0.45,0.45),accelx: frandom(0.25,0.95),accely: frandom(-0.15,0.15),accelz: frandom(-0.35,0.35),startalphaf: frandom(0.25,0.65),fadestepf: -1,sizestep: 2,startroll: random(-180,180),rollvel: random(-3,3));
+	    PM_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT,lifetime: random(5,15),size: 280,startalphaf: 1.0,fadestepf: 0,sizestep: -20,startroll: random(-180,180));
 	  for(int i=random(5,8);i>0;i--)
-	    A_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,100),size: frandom(3,15),xoff: frandom(-2,2),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(1,10),vely: frandom(-3,3),velz: frandom(-0.1,4),accelx: frandom(-0.005,0.005),accely: frandom(-0.005,0.005),accelz: frandom(-0.0,-0.3),startalphaf: 1.0,fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
+	    PM_SpawnParticleEx("",tex[2],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,100),size: frandom(3,15),xoff: frandom(-2,2),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(1,10),vely: frandom(-3,3),velz: frandom(-0.1,4),accelx: frandom(-0.005,0.005),accely: frandom(-0.005,0.005),accelz: frandom(-0.0,-0.3),startalphaf: 1.0,fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
 	}
 
     TextureID tex[3];
@@ -341,9 +341,9 @@ Class PM_AbhorBarrageBall : Fatshot
   Go:
     ABHB AABB 1 Bright Light("SoulHarvesterBall1")
 	{
-     A_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL,lifetime: random(1,2),size: random(45,80),xoff: 5,startalphaf: frandom(0.15,0.85),startroll: random(-180,180));
-	 A_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,40),size: 45.0,xoff: -5,velx: frandom(-0.05,0.05),vely: frandom(-0.05,0.05),velz: frandom(-0.05,0.05),startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180),rollvel: random(-3,3));
-	 A_SpawnParticleEx("0B3D94",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,90),size: random(15,45),xoff: frandom(-2,2),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(-0.65,0.65),vely: frandom(-0.65,0.65),velz: frandom(-0.65,0.65),startalphaf: frandom(0.25,0.85),fadestepf: -1,startroll: random(-180,180),rollvel: random(-3,3));
+     PM_SpawnParticleEx("",tex[0],style: STYLE_Add,flags: SPF_FULLBRIGHT|SPF_RELATIVE|SPF_ROLL,lifetime: random(1,2),size: random(45,80),xoff: 5,startalphaf: frandom(0.15,0.85),startroll: random(-180,180));
+	 PM_SpawnParticleEx("0B3D94",tex[1],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,40),size: 45.0,xoff: -5,velx: frandom(-0.05,0.05),vely: frandom(-0.05,0.05),velz: frandom(-0.05,0.05),startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180),rollvel: random(-3,3));
+	 PM_SpawnParticleEx("0B3D94",tex[2],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,90),size: random(15,45),xoff: frandom(-2,2),yoff: frandom(-2,2),zoff: frandom(-2,2),velx: frandom(-0.65,0.65),vely: frandom(-0.65,0.65),velz: frandom(-0.65,0.65),startalphaf: frandom(0.25,0.85),fadestepf: -1,startroll: random(-180,180),rollvel: random(-3,3));
 	 A_Weave(soulhspeed,0,soulhdist,0);
 	}
     Loop;
@@ -393,8 +393,8 @@ Class PM_AbhorSmallBall : Actor
   Go:
     SHBA AABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABBAABB 1 Bright Light("HellsFurySoul3")
 	{
-	 A_SpawnParticleEx("0B3D94",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(10,20),size: 15.0,xoff: -5,startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180));
-	 A_SpawnParticleEx("143B76",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(6,30),size: 20.0,xoff: -5,startalphaf: frandom(0.5,0.8),fadestepf: -1,startroll: random(-180,180));
+	 PM_SpawnParticleEx("0B3D94",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(10,20),size: 15.0,xoff: -5,startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180));
+	 PM_SpawnParticleEx("143B76",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(6,30),size: 20.0,xoff: -5,startalphaf: frandom(0.5,0.8),fadestepf: -1,startroll: random(-180,180));
 	 A_Jump(7,"Death");
 	 A_SeekerMissile(1,2);
 	 A_Weave(1, 1, 1.5, 0);
@@ -452,17 +452,17 @@ Class PM_AbhorSoulVomit : Actor
      TNT1 A 0
 	 {
 	  for(int i=random(2,4);i>0;i--)
-	      A_SpawnParticleEx("0B3D94",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,40),size: random(25,65),xoff: -5,velx: frandom(-0.45,0.45),vely: frandom(-0.45,0.45),velz: frandom(-0.45,0.45),accelx: frandom(0.25,0.95),accely: frandom(-0.15,0.15),accelz: frandom(-0.35,0.35),startalphaf: frandom(0.25,0.65),fadestepf: -1,sizestep: 2,startroll: random(-180,180),rollvel: random(-3,3));
+	      PM_SpawnParticleEx("0B3D94",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,40),size: random(25,65),xoff: -5,velx: frandom(-0.45,0.45),vely: frandom(-0.45,0.45),velz: frandom(-0.45,0.45),accelx: frandom(0.25,0.95),accely: frandom(-0.15,0.15),accelz: frandom(-0.35,0.35),startalphaf: frandom(0.25,0.65),fadestepf: -1,sizestep: 2,startroll: random(-180,180),rollvel: random(-3,3));
 	  for(int i=random(1,3);i>0;i--)
-		  A_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,35),size: frandom(1,10),xoff: frandom(-1,1),yoff: frandom(-1,1),zoff: frandom(-1,1),velx: frandom(1,10),vely: frandom(-2,2),velz: frandom(-0.6,3),accelx: frandom(-0.005,0.005),accely: frandom(-0.005,0.005),accelz: frandom(-0.0,-0.8),startalphaf: 1.0,fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
+		  PM_SpawnParticleEx("",tex[1],style: STYLE_Add,flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,lifetime: random(1,35),size: frandom(1,10),xoff: frandom(-1,1),yoff: frandom(-1,1),zoff: frandom(-1,1),velx: frandom(1,10),vely: frandom(-2,2),velz: frandom(-0.6,3),accelx: frandom(-0.005,0.005),accely: frandom(-0.005,0.005),accelz: frandom(-0.0,-0.8),startalphaf: 1.0,fadestepf: -0.5,sizestep: -0.2,startroll: random(-180,180));
 	 }
   Go:
     SHBA AABB 1 Bright Light("HellsFurySoul2") 
 	{
 	if(random(1,20) == 1)
 	SetStateLabel("WeaveReset");
-	  A_SpawnParticleEx("0B3D94",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,40),size: 20.0,xoff: -5,startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180));
-	  A_SpawnParticleEx("143B76",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(6,20),size: 35.0,xoff: -5,startalphaf: frandom(0.5,0.8),fadestepf: -1,startroll: random(-180,180));
+	  PM_SpawnParticleEx("0B3D94",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(15,40),size: 20.0,xoff: -5,startalphaf: frandom(0.25,0.65),fadestepf: -1,startroll: random(-180,180));
+	  PM_SpawnParticleEx("143B76",tex[0],style: STYLE_Add,flags: SPF_ROLL|SPF_RELATIVE,lifetime: random(6,20),size: 35.0,xoff: -5,startalphaf: frandom(0.5,0.8),fadestepf: -1,startroll: random(-180,180));
 	  A_Weave(soulhspeed,soulvspeed,soulhdist,soulvdist);
 	}
     Loop;

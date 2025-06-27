@@ -418,7 +418,7 @@ Class PM_POTS : PMVoidMonsterBase
 	    TNT1 A 0 A_Scream;
 		TNT1 AAAAAA 0
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "000000",
 		 TexMan.CheckForTexture("GNSMK0"),
@@ -590,7 +590,7 @@ Class PM_POTSScreamer : PMVoidMonsterBase
 	    TNT1 A 0 A_Scream;
 		TNT1 AAAAAA 0
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "000000",
 		 TexMan.CheckForTexture("GNSMK0"),
@@ -666,7 +666,7 @@ Default
    }
    void PossSpriteSmoke()
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "000000",
 		 TexMan.CheckForTexture("GNSMK0"),

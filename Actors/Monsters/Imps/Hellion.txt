@@ -351,7 +351,7 @@ Class PM_HellionFlare : PMProjectileBase //[NERU] todo: find a fiery whiz sound
    Super.Tick();
    if(!level.IsFrozen() && level.maptime % 5)
    {
-	A_SpawnParticleEx("",tex[3], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 1, size: 30.0, xoff: -5, startalphaf: 0.6);
+	PM_SpawnParticleEx("",tex[3], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: 1, size: 30.0, xoff: -5, startalphaf: 0.6);
    }
   }
 
@@ -362,10 +362,10 @@ Class PM_HellionFlare : PMProjectileBase //[NERU] todo: find a fiery whiz sound
 	TNT1 A 0
 	{
 	for(int i=random(1,4);i>0;i--)
-	  { A_SpawnParticleEx("ffb521",tex[0], style: STYLE_Normal, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(10,250),size: frandom(10,50), xoff: -25, velx: frandom(0,2), vely: frandom(-0.4,0.4), velz: frandom(-0.4,0.7),startalphaf: frandom(0.1,0.5)
+	  { PM_SpawnParticleEx("ffb521",tex[0], style: STYLE_Normal, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(10,250),size: frandom(10,50), xoff: -25, velx: frandom(0,2), vely: frandom(-0.4,0.4), velz: frandom(-0.4,0.7),startalphaf: frandom(0.1,0.5)
 	  , fadestepf: -1, sizestep: frandom(0.0,1.4), startroll: random(-180,180), rollvel: frandom(-1,1)); }
-	  A_SpawnParticleEx("",tex[1], style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,5),size: 180, xoff: -22, startalphaf: 0.9, sizestep: -8, startroll: random(-180,180));
-	  A_SpawnParticleEx("",tex[3], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(1,5), size: 120.0, xoff: -5, startalphaf: 0.6);
+	  PM_SpawnParticleEx("",tex[1], style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,5),size: 180, xoff: -22, startalphaf: 0.9, sizestep: -8, startroll: random(-180,180));
+	  PM_SpawnParticleEx("",tex[3], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(1,5), size: 120.0, xoff: -5, startalphaf: 0.6);
 	}
   Go:
     TRCR A 1 Bright { PM_CheckWhiz(); A_Quake(1,2,0,500); }
@@ -376,10 +376,10 @@ Class PM_HellionFlare : PMProjectileBase //[NERU] todo: find a fiery whiz sound
 	  TNT1 A 0
 	{
 	 for(int i=2;i>0;i--)
-	  { A_SpawnParticleEx("",tex[1], style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,20),size: random(80,150), xoff: -5, startalphaf: frandom(0.75,0.95), sizestep: frandom(-0.65,-3), startroll: random(-180,180)); }
+	  { PM_SpawnParticleEx("",tex[1], style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,20),size: random(80,150), xoff: -5, startalphaf: frandom(0.75,0.95), sizestep: frandom(-0.65,-3), startroll: random(-180,180)); }
 	 for(int i=random(5,12);i>0;i--)
-	  { A_SpawnParticleEx("",tex[2], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: random(18,40),size: frandom(1,20), velx: frandom(-3,3), vely: frandom(-3,3), velz: frandom(-3,5),accelz: frandom(-0.0,-0.8), startalphaf: 1.0, sizestep: -0.2, startroll: random(-180,180)); }
-	  A_SpawnParticleEx("",tex[3], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(1,5), size: 150.0, xoff: -5, startalphaf: 0.8);
+	  { PM_SpawnParticleEx("",tex[2], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL, lifetime: random(18,40),size: frandom(1,20), velx: frandom(-3,3), vely: frandom(-3,3), velz: frandom(-3,5),accelz: frandom(-0.0,-0.8), startalphaf: 1.0, sizestep: -0.2, startroll: random(-180,180)); }
+	  PM_SpawnParticleEx("",tex[3], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT,lifetime: random(1,5), size: 150.0, xoff: -5, startalphaf: 0.8);
 	}
     TNT1 AA 2 Light("AvatarFireball1") Bright;
     Stop;
@@ -427,13 +427,13 @@ Class PM_HellionHoming : CacodemonBall
    Super.Tick();
    if(level.maptime % 5)
    {
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	 (
 		"ffb521",
 		tex[0], style: STYLE_Add, flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT, lifetime: 40, 
 		size: 40.0, xoff: -10, startalphaf: 0.9, fadestepf: -1, sizestep: -0.65, startroll: random(-180,180)
 	 );
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	 (
 		"",
 		tex[2], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
@@ -441,7 +441,7 @@ Class PM_HellionHoming : CacodemonBall
 		zoff: random(-2,2), velx: frandom(-0.6,0.6), vely: frandom(-0.6,0.6), velz: frandom(-0.6,0.6),
 		startalphaf: 1.0, fadestepf: -1, sizestep: -0.2, startroll: random(-180,180)
 	 );
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	 (
 		"",
 		tex[3], style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT,
@@ -458,7 +458,7 @@ Class PM_HellionHoming : CacodemonBall
 	TNT1 A 0
 	{
 	for(int i=random(1,2);i>0;i--)
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	 (
 	 "#d2d2d2",
 	 tex[0], style: STYLE_Normal, flags: SPF_RELATIVE|SPF_ROLL, lifetime: random(10,250),
@@ -467,7 +467,7 @@ Class PM_HellionHoming : CacodemonBall
 	 rollvel: frandom(-1,1)
 	 );
 	for(int i=random(1,2);i>0;i--)
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
      (
 	 "",
      tex[1], style: STYLE_Add, flags: SPF_RELATIVE|SPF_ROLL|SPF_FULLBRIGHT, lifetime: random(1,4),
@@ -529,7 +529,7 @@ Class PM_HellionGeyser : Actor
    {
    A_SetRoll(random(0,360));
    A_FadeIn(0.01,FTF_CLAMP);
-   A_SpawnParticleEx
+   PM_SpawnParticleEx
 	   ( "",
 		TexMan.CheckForTexture("SPKOA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
 		lifetime: random(1,60), size: frandom(0.9,24), xoff: random(-55,55), yoff: random(-55,55),
@@ -540,14 +540,14 @@ Class PM_HellionGeyser : Actor
    {
     A_StartSound("Exile/Immolate");
 	A_StartSound("Exile/GroundLoop",8,CHANF_LOOPING,volume:0.55,pitch:1.25);
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 		(   
 		"",
 		TexMan.CheckForTexture("EXN1B0"), style: STYLE_Add, flags: SPF_ROLL|SPF_RELATIVE|SPF_FULLBRIGHT,
 		lifetime: 30, size: 150, xoff: -15, startalphaf: 1, fadestepf: -1, sizestep: 15, startroll: random(-180,180)
 		);
     for(int i=15;i>0;i--)
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 		(
 		"ffb521",
 		TexMan.CheckForTexture("F1R1A0"),
@@ -558,7 +558,7 @@ Class PM_HellionGeyser : Actor
 		rollvel: frandom(-1,1)
 		);
 	for(int i=random(10,15);i>0;i--)
-	A_SpawnParticleEx
+	PM_SpawnParticleEx
 	 (
 		"",
 		TexMan.CheckForTexture("SPKOA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
@@ -574,7 +574,7 @@ Class PM_HellionGeyser : Actor
 	 SetStateLabel("Death");
 	 A_FadeIn(0.25,FTF_CLAMP);
 	 A_SetRoll(random(0,360));
-	 A_SpawnParticleEx
+	 PM_SpawnParticleEx
 	 (
 		"",
 		TexMan.CheckForTexture("SPKOA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
@@ -596,7 +596,7 @@ Class PM_HellionGeyser : Actor
    if(attackloop >= 8)
    SetStateLabel("DeathEnd");
    A_SetRoll(random(0,360));
-   A_SpawnParticleEx
+   PM_SpawnParticleEx
 	 (
 		"",
 		TexMan.CheckForTexture("SPKOA0"), style: STYLE_Add, flags: SPF_RELATIVE|SPF_FULLBRIGHT|SPF_ROLL,
@@ -712,7 +712,7 @@ Class PM_HellionMendingOrb : Actor
   
   if((level.maptime % 2) == 0)
   {
-    A_SpawnParticleEx
+    PM_SpawnParticleEx
 	(   
     "67fc26",
 	TexMan.CheckForTexture("GNSMK0"),
@@ -748,7 +748,7 @@ Class PM_HellionMendingOrb : Actor
     {
      if(timer > 45)
 	  SetStateLabel("Go");
-     A_SpawnParticleEx
+     PM_SpawnParticleEx
 	 (   
       "67fc26",
 	  TexMan.CheckForTexture("GNSMK0"), style: STYLE_Add,
@@ -765,7 +765,7 @@ Class PM_HellionMendingOrb : Actor
      {
       A_StartSound("Hellion/BuffMonNova");
       A_RadiusGive("PM_HellionMendingBuffGiver2",500,RGF_MONSTERS,4);
-      A_SpawnParticleEx
+      PM_SpawnParticleEx
        (
 	   "",
 	   TexMan.CheckForTexture("DTPRA0"),
@@ -780,7 +780,7 @@ Class PM_HellionMendingOrb : Actor
 	   rollvel: frandom(-9,9),
 	   rollacc: 0
        );
-      A_SpawnParticleEx
+      PM_SpawnParticleEx
        (
 	   "",
 	   TexMan.CheckForTexture("SPKOG0"),
@@ -816,7 +816,7 @@ Class PM_HellionMendingOrb2 : Actor
   
   if((level.maptime % 2) == 0)
   {
-    A_SpawnParticleEx
+    PM_SpawnParticleEx
 	(   
     "67fc26",
 	TexMan.CheckForTexture("GNSMK0"),

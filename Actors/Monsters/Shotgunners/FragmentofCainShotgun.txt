@@ -232,7 +232,7 @@ Class PM_FOCShotgun : PMVoidMonsterBase
 	    TNT1 A 0 PM_Scream();
 		TNT1 AAAAAAAAAAAAAAAAAAA 1
 		{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 	    (   
 		 "000000",
 		 TexMan.CheckForTexture("GNSMK0"),

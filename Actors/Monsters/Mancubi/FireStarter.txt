@@ -15,7 +15,7 @@ Class PM_FireStarter : PMVoidMonsterBase
 	
 	Void A_VoidCloud()
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 			(
 			"000000",
 			TexMan.CheckForTexture("GNSMK0"),
@@ -644,7 +644,7 @@ Class PM_Fire_Starter_Flee : actor
 
 	Void A_VoidCloud()
 	{
-		A_SpawnParticleEx
+		PM_SpawnParticleEx
 			(
 			"000000",
 			TexMan.CheckForTexture("GNSMK0"),
@@ -882,7 +882,7 @@ Class PM_Basic_Fire_Starter_Ball : DoomImpBall
 Spawn:
  AFX5 AABBCC 1 bright Light("WhiteFire3") 
 		{
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 				(
 					"ffffff",
 					TexMan.CheckForTexture("GNSML0"),
@@ -895,7 +895,7 @@ Spawn:
 					fadestepf: -1,
 					startroll: random(-180,180)
 				);
-			A_SpawnParticleEx
+			PM_SpawnParticleEx
 				(
 					"ffffff",
 					TexMan.CheckForTexture("XFSDB0"),
